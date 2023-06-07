@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             TeacherSeeder::class,
             StudentSeeder::class,
             Academic_yearSeeder::class,
-            Academic_classSeeder::class
+            Academic_classSeeder::class,
+            Academic_class_studentSeeder::class
         ]);
     }
 }

@@ -5,7 +5,8 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-                moul: ['KhmerOSmuollight.ttf']
+                moul: ['KhmerOSmuollight.ttf'],
+                kbalthom: ['AKbalthom KhmerHand.ttf']
             },
         },
     },

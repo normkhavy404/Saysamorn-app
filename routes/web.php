@@ -8,6 +8,10 @@ use App\Http\Livewire\AcademicClass\ClassCreate;
 use App\Http\Livewire\AcademicClass\ClassEdit;
 use App\Http\Livewire\AcademicClass\ClassIndex;
 use App\Http\Livewire\AcademicClass\ClassShow;
+use App\Http\Livewire\AcademicClassStudent\AcdemicClassStudentCreate;
+use App\Http\Livewire\AcademicClassStudent\AcdemicClassStudentEdit;
+use App\Http\Livewire\AcademicClassStudent\AcdemicClassStudentIndex;
+use App\Http\Livewire\AcademicClassStudent\AcdemicClassStudentShow;
 use App\Http\Livewire\AcademicYear\YearCreate;
 use App\Http\Livewire\AcademicYear\YearEdit;
 use App\Http\Livewire\AcademicYear\YearIndex;
@@ -100,5 +104,12 @@ Route::middleware('auth')->group(function () {
     Route::get('academic_class/edit{id}',ClassEdit::class)->name('class_edit');
     Route::get('academic_class/show{id}', ClassShow::class)->name('class_show');
 
+
+    //academic class student
+
+    Route::get('academic_class_student/index', AcdemicClassStudentIndex::class)->name('class_student_index');
+    Route::get('academic_class_student/create', AcdemicClassStudentCreate::class)->name('class_student_create');
+    Route::get('academic_class_student/edit{id}', AcdemicClassStudentEdit::class)->name('class_student_edit');
+    Route::get('academic_class_student/show{id}',AcdemicClassStudentShow::class)->name('class_student_show');
 
 });

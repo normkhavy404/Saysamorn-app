@@ -11,8 +11,6 @@
                             <p class="text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-
-
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <label for="start_date" class="block font-serif text-sm text-black">Start Date</label>
                         <input type="date" name="start_date" id="start_date" wire:model="start_date"
@@ -21,7 +19,6 @@
                             <p class="text-sm text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <label for="end_date" class="block font-serif text-sm text-black">End Date</label>
                         <input type="date" wire:model="end_date" name="end_date" id="end_date"
