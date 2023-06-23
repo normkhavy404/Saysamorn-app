@@ -7,7 +7,6 @@ use Livewire\Component;
 
 class Show extends Component
 {
-    // public $code, $first_name ,$last_name ,$gender ,$telephone , $email,  $teacher_id;
     public $teachers;
     public function render()
     {

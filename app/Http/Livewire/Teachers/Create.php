@@ -16,11 +16,14 @@ class Create extends Component
         'gender'     => 'required',
         'telephone'  => 'required'
     ];
-    // protected $messages = [
-    //     'code.required'   => 'សូមបំពេញអត្ដលេខ',
-    //     'first_name.required' => 'សូមបំពេញឈ្មោះ',
-    //     'description.required' => 'សូមបំពេញការពិពណ៍នា',
-    // ];
+    protected $messages = [
+        'code.required'   => 'សូមបំពេញអត្ដលេខ',
+        'first_name.required' => 'សូមបំពេញនាមត្រកូល',
+        'last_name.required' => 'សូមបំពេញនាមខ្លួន',
+        'gender.required' => 'សូមបំពេញភេទ',
+        'telephone.required' => 'សូមបំពេញលេខទូរស័ព្ទ',
+
+    ];
     public function render()
     {
         $teachers = DB::table('teachers')->get();

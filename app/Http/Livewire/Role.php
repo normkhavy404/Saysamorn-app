@@ -19,7 +19,7 @@ class Role extends Component
     }
     public function save(){
         if($this->role_id){
-            //edit
+            //ed
             $roles = ModelsRole::find($this->role_id);
             $roles->title = $this->role_name;
             $roles->save();

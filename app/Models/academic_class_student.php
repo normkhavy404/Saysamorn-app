@@ -14,4 +14,9 @@ class academic_class_student extends Model
         'academic_class_id',
         'status'
     ];
+
+    public function students()
+    {
+        return $this->belongsToMany(Student::class);
+    }
 }

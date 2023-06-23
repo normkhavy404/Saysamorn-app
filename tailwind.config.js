@@ -6,7 +6,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans],
                 moul: ['KhmerOSmuollight.ttf'],
-                kbalthom: ['AKbalthom KhmerHand.ttf']
+                'Notokhmer': ['Noto Sans Khmer', 'sans-serif']
             },
         },
     },

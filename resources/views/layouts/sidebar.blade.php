@@ -1,169 +1,117 @@
 <!-- component -->
 <aside
-    class="ml-[-100%] fixed z-10 top-0 pb-3 px-1 w-full flex flex-col justify-between h-screen border-r bg-green-500 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+    class="ml-[-100%] fixed z-10 top-0 pb-3 px-1 w-full flex flex-col justify-between h-screen border-r bg-blue-400 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
     <div>
-        <div class="mt-1 text-center">
-            <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt=""
-                class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28">
-            <span class="hidden font-serif lg:block text-white">Supper Admin</span>
+        <div class="mt-1 text-center ">
+            <img class=" ml-16" src="{{ Storage::url('images/thsis.png') }}" width="90" height="90">
+            <span class="hidden font-serif lg:block text-black text-base font-bold py-1"></span>
         </div>
         <ul class="space-y-1 tracking-wide mt-1">
             <li>
                 <a href="{{ route('home') }}" aria-label="dashboard"
-                    class="relative px-4 py-3 flex items-center space-x-4 rounded-xl {{ Request::is('/') ? 'text-white bg-gradient-to-r from-sky-600 to-cyan-400' : '' }}">
-                    <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
-                        <path
-                            d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z"
-                            class="fill-current text-cyan-400 dark:fill-slate-600"></path>
-                        <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z"
-                            class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
-                        <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z"
-                            class="fill-current group-hover:text-sky-300"></path>
-                    </svg>
-                    <span class="-mr-1 font-kbalthom text-lg">ផ្ទាំងគ្រប់គ្រង</span>
+                    class="relative px-4 py-3 flex items-center space-x-4 rounded-xl {{ Request::is('/') ? 'text-white bg-gradient-to-r from-blue-200 to-cyan-400' : '' }}">
+                    <svg class="h-5 w-5 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                      </svg>
+                    <span class="-mr-1 font-Notokhmer text-base">ផ្ទាំងគ្រប់គ្រង</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('users.index') }}"
-                    class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd"
-                            d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z"
-                            clip-rule="evenodd" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600"
-                            d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
-                    </svg>
-                    <span class="group-hover:text-white font-kbalthom text-lg">អ្នកប្រើ</span>
+                    class="px-4 py-3 flex items-center space-x-4 rounded-xl {{ Request::is('users.index') ? 'text-white bg-gradient-to-r from-blue-200 to-cyan-400' : '' }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">អ្នកប្រើ</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('role') }}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z"
-                            clip-rule="evenodd" />
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">តួនាទី</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">តួនាទី</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('index') }}"
                     class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600"
-                            d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">គ្រូបង្រៀន</span>
+                    <svg class="h-5 w-5 text-white"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                      </svg>
+                    <span class="group-hover:text-white font-Notokhmer text-base">គ្រូបង្រៀន</span>
                 </a>
             </li>
             <li>
-                <a href="{{route('student_index')}}" class="px-4 py-3 flex items-center font-serif space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white text-lg">សិស្ស</span>
+                <a href="{{route('student_index')}}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                      </svg>
+
+                    <span class="group-hover:text-white text-base font-Notokhmer">សិស្ស</span>
                 </a>
             </li>
-            {{-- <li>
-                <select class=" px-14 w-full bg-green-500 text-lg font-serif">
-                    <option value="1">Role</option>
-                    <option value="2">User</option>
-                  </select>
-            </li> --}}
             <li>
                 <a href="{{route('year_index')}}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white text-lg font-serif">ឆ្នាំសិក្សា</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                      </svg>
+
+                    <span class="group-hover:text-white text-base font-Notokhmer">ឆ្នាំសិក្សា</span>
                 </a>
             </li>
             <li>
                 <a href="{{route('class_index')}}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">ថ្នាក់សិក្សា</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">ថ្នាក់សិក្សា</span>
                 </a>
             </li>
             <li>
                 <a href="{{route('class_student_index')}}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">ថ្នាក់សិក្សាសិស្ស</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">ទាញសិស្សចូលថ្នាក់</span>
                 </a>
             </li>
 
             <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">Score</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">ពិន្ទុ</span>
                 </a>
             </li>
 
             <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path class="fill-current text-gray-300 group-hover:text-cyan-300"
-                            d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
-                        <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd"
-                            d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                            clip-rule="evenodd" />
-                    </svg>
-                    <span class="group-hover:text-white font-serif text-lg">Attendent</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white  ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
+                      </svg>
+
+                    <span class="group-hover:text-white font-Notokhmer text-base">ស្រង់វត្តមាន</span>
                 </a>
             </li>
 
         </ul>
     </div>
-    {{-- <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
-        <button class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-            <span class="group-hover:text-gray-700">Logout</span>
-        </button>
-    </div> --}}
+
 </aside>
-<div class="sticky position-absolute top-0 z-5 flex flex-col ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] ">
-    <div class="sticky z-10 top-0 h-16 border-b bg-green-500 lg:py-2.5">
+<div class="sticky position-absolute top-0 z-5 flex flex-col ml-auto mb-3 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] ">
+    <div class="sticky z-10 top-0 h-16 border-b bg-blue-400 lg:py-2.5">
         <div class="px-10 flex items-center justify-between space-x-4 2xl:container">
-            <h5 hidden class="text-3xl text-white font-kbalthom font-bold lg:block">សាលាបឋមសិក្សា សាយសាម៉ន</h5>
+            <h5 hidden class="text-3xl text-black font-Notokhmer font-bold lg:block">ប្រព័ន្ធគ្រប់គ្រង សាលាបឋមសិក្សា សាយសាម៉ន</h5>
             <div class="flex space-x-4">
-                <div class="text-white font-moul">
-                    <button>
-                        Logout
-                    </button>
-                </div>
+                <img class="h-10 w-10 "src="{{ Storage::url('images/cambodia.png.png') }}" width="230" height="200"
+                    alt="logo">
             </div>
         </div>
     </div>
