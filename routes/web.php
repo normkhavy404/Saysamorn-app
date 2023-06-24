@@ -19,7 +19,10 @@ use App\Http\Livewire\AcademicYear\YearCreate;
 use App\Http\Livewire\AcademicYear\YearEdit;
 use App\Http\Livewire\AcademicYear\YearIndex;
 use App\Http\Livewire\AcademicYear\YearShow;
-
+use App\Http\Livewire\Attendent\AttCreate;
+use App\Http\Livewire\Attendent\AttEdit;
+use App\Http\Livewire\Attendent\AttIndex;
+use App\Http\Livewire\Attendent\AttShow;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
 use App\Http\Livewire\Auth\Passwords\Email;
@@ -27,6 +30,11 @@ use App\Http\Livewire\Auth\Passwords\Reset;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use App\Http\Livewire\Role;
+
+use App\Http\Livewire\Score\ScoreCreate;
+use App\Http\Livewire\Score\ScoreEdit;
+use App\Http\Livewire\Score\ScoreIndex;
+use App\Http\Livewire\Score\ScoreShow;
 
 use App\Http\Livewire\Students\StudentCreate;
 use App\Http\Livewire\Students\StudentEdit;
@@ -113,5 +121,20 @@ Route::middleware('auth')->group(function () {
     Route::get('academic_class_student/create/{id}', AcdemicClassStudentCreate::class)->name('class_student_create');
     Route::get('academic_class_student/edit{id}', AcdemicClassStudentEdit::class)->name('class_student_edit');
     Route::get('academic_class_student/show/{id}',AcdemicClassStudentShow::class)->name('class_student_show');
+
+    //Score
+
+    Route::get('score/index', ScoreIndex::class)->name('score_index');
+    Route::get('score/create', ScoreCreate::class)->name('score_create');
+    Route::get('score/edit/{id}', ScoreEdit::class)->name('score_edit');
+    Route::get('score/show/{id}', ScoreShow::class)->name('score_show');
+
+    //Attendent
+    
+    Route::get('attendent/index', AttIndex::class)->name('attendent_index');
+    Route::get('attendent/create', AttCreate::class)->name('attendent_create');
+    Route::get('attendent/edit/{id}', AttEdit::class)->name('attendent_edit');
+    Route::get('attendent/show/{id}', AttShow::class)->name('attendent_show');
+
 
 });

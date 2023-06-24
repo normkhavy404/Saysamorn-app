@@ -16,6 +16,16 @@ class YearCreate extends Component
         'status'     =>  'required'
 
     ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+    protected $messages = [
+        'name_year.required' => 'សូមបំពេញឆ្នាំសិក្សា',
+        'start_date.required' => 'សូមបំពេញថ្ងៃខែឆ្នាំចាប់ផ្តើម',
+        'end_date.required' => 'សូមបំពេញថ្ងៃខែឆ្នាំបញ្ចប់',
+        'status.required' => 'សូមបំពេញស្ថានភាព',
+    ];
 
     public function render()
     {

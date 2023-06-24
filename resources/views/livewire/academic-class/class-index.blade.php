@@ -100,16 +100,20 @@
                         <div
                             class="w-full border max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
                             <div class=" text-center py-2">
-                                <p class="text-8xl font-Notokhmer">{{ $class->name_class }}</p>
+                                <p class="text-6xl font-Notokhmer">{{ $class->name_class }}</p>
                             </div>
                             <h1 class="mt-2 text-center text-2xl font-Notokhmer text-gray-900">{{ $class->first_name }}
                                 {{ $class->last_name }}</h1>
-                            <p class="my-4 text-center text-sm text-gray-900">{{ $class->academic_year_name }}</p>
+                            <div class="text-center">
+                                <a href="{{route('class_edit',$class->id)}}">
+                                    <button class="inline-block rounded-md bg-cyan-300 px-1 py-2 font-Notokhmer text-base text-white shadow-md duration-75 hover:bg-cyan-600">កែប្រែ</button>
+                                </a>
+                            </div>
                             <div class="space-x-4 bg-gray-100 py-4">
                                 <div>
                                     <a href="{{ route('class_show', $class->id) }}">
                                         <button
-                                            class="inline-block rounded-md bg-red-800 px-1 py-2 font-Notokhmer text-base text-red-100 shadow-md duration-75 hover:bg-red-600">
+                                            class="inline-block rounded-md bg-yellow-700 px-1 py-2 font-Notokhmer text-base text-red-100 shadow-md duration-75 hover:bg-yellow-500">
                                             បញ្ជីឈ្មោះសិស្ស
                                         </button>
                                     </a>
@@ -120,7 +124,7 @@
                                         </button>
                                     </a>
 
-                                    <a href="{{ route('student_index') }} ">
+                                    <a href="">
                                         <button
                                             class="inline-block rounded-md bg-green-800 px-1 py-2 font-Notokhmer text-base text-green-100 shadow-md duration-75 hover:bg-green-600">
                                             សម្រង់វត្តមាន

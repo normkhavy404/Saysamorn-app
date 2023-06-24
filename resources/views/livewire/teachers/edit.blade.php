@@ -19,10 +19,10 @@
             </a>
         </div>
         <form wire:submit.prevent="update">
-            <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
                 <div class="mt-5 md:mt-0 md:col-span-2">
                     <div class=" border border-slate-500 shadow-sm overflow-hidden sm:rounded-md">
-                        <div class="px-4 bg-white sm:p-6">
+                        <div class="px-4 sm:p-3">
                             <label for="code" class="block font-Notokhmer text-xl text-black">អត្តលេខ</label>
                             <input type="text" name="code" id="code" wire:model="code"
                                 class="form-input rounded-md shadow-sm block w-full font-Notokhmer" />
@@ -30,25 +30,25 @@
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div class="px-4 bg-white sm:p-6 flex justify-between">
-                            <div>
+                        <div class="px-4 sm:p-3 flex justify-between gap-2 row items-center">
+                            <div class="w-full">
                                 <label for="first_name" class="block font-Notokhmer text-xl text-black">នាមត្រកូល</label>
                                 <input type="text" name="first_name" id="first_name" wire:model="first_name"
-                                    class="form-input rounded-md shadow-sm block w-100 text-xl font-Notokhmer" />
+                                    class="form-input w-full rounded-md shadow-sm block w-100 text-xl font-Notokhmer" />
                                 @error('first_name')
                                     <p class="text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div>
+                            <div class="w-full">
                                 <label for="last_name" class="block font-Notokhmer text-xl text-black">នាមខ្លួន</label>
                                 <input type="text" name="last_name" id="last_name" wire:model="last_name"
-                                    class="form-input rounded-md shadow-sm block w-auto text-xl font-Notokhmer" />
+                                    class="form-input w-full rounded-md shadow-sm block text-xl font-Notokhmer" />
                                 @error('last_name')
                                     <p class="text-sm text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
                         </div>
-                        <div class="px-4 bg-white sm:p-6">
+                        <div class="px-4 sm:p-3">
                             <label for="gender" class="block mb-2 text-xl font-Notokhmer text-gray-900 dark:text-black">
                                 ភេទ
                             </label>
@@ -62,7 +62,7 @@
                                 <p class="text-sm text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div class="px-4 bg-white sm:p-6">
+                        <div class="px-4 sm:p-3">
                             <label for="telephone" class="block font-Notokhmer text-xl text-black">លេខទូរស័ព្ទ</label>
                             <input type="text" wire:model="telephone" name="telephone" id="telephone"
                                 class="form-input rounded-md shadow-sm  block w-full" />
@@ -71,7 +71,7 @@
                             @enderror
                         </div>
 
-                        <div class="px-4 bg-white sm:p-6">
+                        <div class="px-4 sm:p-3">
                             <label for="email" class="block font-Notokhmer text-xl text-black">អ៊ីម៉ែល</label>
                             <input type="email" name="email" id="email" wire:model="email"
                                 class="form-input rounded-md shadow-sm block w-full" />

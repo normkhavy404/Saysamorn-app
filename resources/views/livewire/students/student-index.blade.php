@@ -26,7 +26,7 @@
                 <div class="py-2 align-middle inline-block sm:px-6 lg:px-1">
                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
-                            <thead class="text-base font-Notokhmer bg-gray-100 text-gray-600">
+                            <thead class="text-base font-Notokhmer text-gray-900">
                                 <tr>
                                     <th scope="col" class="px-6 py-3 ">
                                         លេខរៀង
@@ -63,23 +63,23 @@
                                         <td scope="col" class="px-6 py-3 ">
                                             {{ $stu->code }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             {{ $stu->first_name }} {{ $stu->last_name }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             @if ($stu->gender == 1)
                                                 ស្រី
                                             @else
                                                 ប្រុស
                                             @endif
                                         </td>
-                                        <td scope="col" class="px-6 py-3 normal-nums">
+                                        <td scope="col" class="px-6 py-3">
                                             {{ $stu->dob }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             {{ $stu->fa_name }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             {{ $stu->mo_name }}
                                         </td>
                                         <td scope="col" class="px-6 py-3 whitespace-nowrap text-sm font-medium ">

@@ -19,7 +19,7 @@
                                     class="form-input rounded-md shadow-sm mt-1 block w-full"
                                     value="{{ old('name', '') }}" />
                                 @error('name')
-                                    <p class="text-sm text-red-600">{{ $message }}</p>
+                                    <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -29,7 +29,7 @@
                                     class="form-input rounded-md shadow-sm mt-1 block w-full"
                                     value="{{ old('email', '') }}" />
                                 @error('email')
-                                    <p class="text-sm text-red-600">{{ $message }}</p>
+                                    <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -39,7 +39,7 @@
                                 <input type="password" name="password" id="password"
                                     class="form-input rounded-md shadow-sm mt-1 block w-full" />
                                 @error('password')
-                                    <p class="text-sm text-red-600">{{ $message }}</p>
+                                    <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 
@@ -54,7 +54,7 @@
                                     @endforeach
                                 </select>
                                 @error('roles')
-                                    <p class="text-sm text-red-600">{{ $message }}</p>
+                                    <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                                 @enderror
                             </div>
 

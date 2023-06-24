@@ -15,7 +15,7 @@
                 @endif
             </div>
         </div>
-        <div class="max-w-4xl mx-auto py-5 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto sm:px-3 lg:px-8">
             <div class="mt-5 md:mt-0 md:col-span-2">
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
@@ -27,7 +27,7 @@
                         @enderror
                     </div>
 
-                    <div class="px-4 py-5 bg-white sm:p-6">
+                    <div class="px-4 sm:p-3">
                         <label for="status" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
                             គ្រូបន្ទុកថ្នាក់
                         </label>

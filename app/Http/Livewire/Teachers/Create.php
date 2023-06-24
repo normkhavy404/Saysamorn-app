@@ -16,11 +16,15 @@ class Create extends Component
         'gender'     => 'required',
         'telephone'  => 'required'
     ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     protected $messages = [
         'code.required'   => 'សូមបំពេញអត្ដលេខ',
         'first_name.required' => 'សូមបំពេញនាមត្រកូល',
         'last_name.required' => 'សូមបំពេញនាមខ្លួន',
-        'gender.required' => 'សូមបំពេញភេទ',
+        'gender.required' => 'សូមបំពេញជ្រើសរើសភេទ',
         'telephone.required' => 'សូមបំពេញលេខទូរស័ព្ទ',
 
     ];

@@ -4,7 +4,7 @@
             <p class=" text-base font-semibold font-Notokhmer">
                 គ្រូបង្រៀន
             </p>
-            <p class=" text-base text-blue-500  font-Notokhmer">ចូរបំពេញព័ត៍មានខាងក្រោម</p>
+            <p class=" text-base text-blue-500 font-Notokhmer">ចូរបំពេញព័ត៍មានខាងក្រោម</p>
         </div>
         <div
             class=" mt-3 inline-flex items-center px-4 py-2 bg-green-800 border border-transparent rounded-md font-Notokhmer text-base text-white">
@@ -16,36 +16,36 @@
                 ថយក្រោយ
             </a>
         </div>
-        <div class="max-w-4xl mx-auto py-4 sm:px-6 lg:px-8 mt-3">
+        <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 mt-3">
             <div class="mt-5 md:mt-0 md:col-span-2 border border-slate-300 rounded-xl shadow-xl">
                 <div class="overflow-hidden sm:rounded-md">
-                    <div class="px-4 sm:p-6">
+                    <div class="px-4 sm:p-2">
                         <label for="code" class="block font-Notokhmer text-xl text-black">អត្តលេខ</label>
                         <input type="text" name="code" id="code" wire:model="code"
                             class="form-input rounded-md shadow-sm mt-1 block w-full" />
                         @error('code')
-                            <p class="text-sm text-red-600">{{ $message }}</p>
+                            <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="px-4 py-5 sm:p-6 flex justify-between ">
-                        <div>
+                    <div class="px-4 sm:p-2 flex justify-between gap-2 row items-center">
+                        <div class="w-full">
                             <label for="first_name" class="block font-Notokhmer text-xl text-black">នាមត្រកូល</label>
                             <input type="text" name="first_name" id="first_name" wire:model="first_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-100" />
+                                class="form-input w-full rounded-md shadow-sm mt-1 block w-100" />
                             @error('first_name')
-                                <p class="text-sm text-red-600">{{ $message }}</p>
+                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
-                        <div class="">
+                        <div class="w-full">
                             <label for="last_name" class="block font-Notokhmer text-xl text-black">នាមខ្លួន</label>
                             <input type="text" name="last_name" id="last_name" wire:model="last_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-auto" />
+                                class="form-input rounded-md w-full shadow-sm mt-1 block" />
                             @error('last_name')
-                                <p class="text-sm text-red-600">{{ $message }}</p>
+                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
                         </div>
                     </div>
-                    <div class="px-4 bg-white sm:p-6">
+                    <div class="px-4 sm:p-2">
                         <label for="gender" class="block mb-2 text-xl font-Notokhmer text-gray-900 dark:text-black">
                             ភេទ
                         </label>
@@ -56,19 +56,19 @@
                             <option value="2" class=" text-xl font-Notokhmer">ស្រី</option>
                         </select>
                         @error('gender')
-                            <p class="text-sm text-red-600">{{ $message }}</p>
+                            <p class="text-base font-Notokhmer  text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="px-4 bg-white sm:p-6">
+                    <div class="px-4 sm:p-3">
                         <label for="telephone" class="block font-Notokhmer text-xl text-black">លេខទូរស័ព្ទ</label>
                         <input type="text" wire:model="telephone" name="telephone" id="telephone"
                             class="form-input rounded-md shadow-sm mt-1 block w-full" />
                         @error('telephone')
-                            <p class="text-sm text-red-600">{{ $message }}</p>
+                            <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
 
-                    <div class="px-4 bg-white sm:p-6">
+                    <div class="px-4 sm:p-3">
                         <label for="email" class="block font-Notokhmer text-xl text-black">
                             អ៊ីមែល
                         </label>

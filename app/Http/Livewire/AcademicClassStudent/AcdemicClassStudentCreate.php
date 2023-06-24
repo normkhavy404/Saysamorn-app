@@ -13,6 +13,9 @@ class AcdemicClassStudentCreate extends Component
     protected $rules =[
         'student_id' => 'required',
     ];
+    protected $messages = [
+        'student_id.required' => 'សូមជ្រើសរើសសិស្ស'
+    ];
     public function render()
     {
         $students = DB::table('students')->get();

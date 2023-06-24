@@ -19,17 +19,17 @@
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
                             <thead>
                                 <tr>
-                                    {{-- <th scope="col"
+                                    <th scope="col"
                                         class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
                                         លេខរៀង
-                                    </th> --}}
+                                    </th>
                                     <th scope="col"
                                         class="px-6 py-3 bg-gray-50  text-base font-Notokhmer text-gray-600">
                                         អត្តលេខ
                                     </th>
                                     <th scope="col"
                                         class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
-                                        ឈ្មោះពេញ
+                                        គោត្តនាម និង នាម
                                     </th>
                                     <th scope="col"
                                         class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
@@ -52,16 +52,16 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($teachers as $tea)
                                     <tr>
-                                        {{-- <td scope="col" class="px-6 py-3">
+                                        <td scope="col" class="px-6 py-3">
                                             {{ $tea->id }}
-                                        </td> --}}
+                                        </td>
                                         <td scope="col" class="px-6 py-3 ">
                                             {{ $tea->code }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             {{ $tea->first_name }} {{ $tea->last_name }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-mono text-lg">
+                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             @if ($tea->gender == 1)
                                                 ប្រុស
                                             @else

@@ -16,8 +16,8 @@
                     @endif
                 </div>
             </div>
-            <div class="py-2 flex justify-between ">
-                <a href="{{ route('class_student_create') }}"
+            <div class="py-2 flex justify-between">
+                <a href="{{ route('class_student_create')}}"
                     class="hover:shadow-form rounded-md bg-blue-600 py-2 px-8 font-Notokhmer text-base text-white ">
                     ការបង្កើត
                 </a>

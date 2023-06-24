@@ -71,7 +71,7 @@
                     <span class="group-hover:text-white font-Notokhmer text-base">ថ្នាក់សិក្សា</span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{route('class_student_index')}}" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
@@ -79,9 +79,9 @@
 
                     <span class="group-hover:text-white font-Notokhmer text-base">ទាញសិស្សចូលថ្នាក់</span>
                 </a>
-            </li>
+            </li> --}}
 
-            <li>
+            {{-- <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
@@ -89,9 +89,9 @@
 
                     <span class="group-hover:text-white font-Notokhmer text-base">ពិន្ទុ</span>
                 </a>
-            </li>
+            </li> --}}
 
-            <li>
+            {{-- <li>
                 <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-black group">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white  ">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13" />
@@ -99,7 +99,7 @@
 
                     <span class="group-hover:text-white font-Notokhmer text-base">ស្រង់វត្តមាន</span>
                 </a>
-            </li>
+            </li> --}}
 
         </ul>
     </div>
