@@ -22,13 +22,20 @@ class Login extends Component
         'password' => ['required'],
     ];
 
+    protected $messages =[
+        'email.required' => 'សូមបំពេញអ៊ីម៉ែល',
+        'password.required' => 'សូមបំពេញលេខសម្ងាត់'
+    ];
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
     public function authenticate()
     {
         $this->validate();
 
         if (!Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             $this->addError('email', trans('auth.failed'));
-
             return;
         }
 

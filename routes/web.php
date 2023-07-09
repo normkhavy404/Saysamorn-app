@@ -3,6 +3,7 @@
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PrintController;
 use App\Http\Controllers\UsersController;
 
 use App\Http\Livewire\AcademicClass\ClassCreate;
@@ -124,17 +125,21 @@ Route::middleware('auth')->group(function () {
 
     //Score
 
-    Route::get('score/index', ScoreIndex::class)->name('score_index');
-    Route::get('score/create', ScoreCreate::class)->name('score_create');
+    Route::get('score/index/{id}', ScoreIndex::class)->name('score_index');
+    Route::get('score/create/{id}', ScoreCreate::class)->name('score_create');
     Route::get('score/edit/{id}', ScoreEdit::class)->name('score_edit');
     Route::get('score/show/{id}', ScoreShow::class)->name('score_show');
 
     //Attendent
-    
-    Route::get('attendent/index', AttIndex::class)->name('attendent_index');
-    Route::get('attendent/create', AttCreate::class)->name('attendent_create');
+
+    Route::get('attendent/index/{id}', AttIndex::class)->name('attendent_index');
+    Route::get('attendent/create/{id}', AttCreate::class)->name('attendent_create');
     Route::get('attendent/edit/{id}', AttEdit::class)->name('attendent_edit');
     Route::get('attendent/show/{id}', AttShow::class)->name('attendent_show');
+
+
+
+    // Route::get('study/indexprint',PrintController::class)->name('print_index');
 
 
 });

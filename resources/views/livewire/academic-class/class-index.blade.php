@@ -105,8 +105,9 @@
                             <h1 class="mt-2 text-center text-2xl font-Notokhmer text-gray-900">{{ $class->first_name }}
                                 {{ $class->last_name }}</h1>
                             <div class="text-center">
-                                <a href="{{route('class_edit',$class->id)}}">
-                                    <button class="inline-block rounded-md bg-cyan-300 px-1 py-2 font-Notokhmer text-base text-white shadow-md duration-75 hover:bg-cyan-600">កែប្រែ</button>
+                                <a href="{{ route('class_edit', $class->id) }}">
+                                    <button
+                                        class="inline-block rounded-md bg-cyan-300 px-1 py-2 font-Notokhmer text-base text-white shadow-md duration-75 hover:bg-cyan-600">កែប្រែ</button>
                                 </a>
                             </div>
                             <div class="space-x-4 bg-gray-100 py-4">
@@ -124,13 +125,13 @@
                                         </button>
                                     </a>
 
-                                    <a href="">
+                                    <a href="{{ route('attendent_index', $class->id) }}">
                                         <button
                                             class="inline-block rounded-md bg-green-800 px-1 py-2 font-Notokhmer text-base text-green-100 shadow-md duration-75 hover:bg-green-600">
                                             សម្រង់វត្តមាន
                                         </button>
                                     </a>
-                                    <a href="">
+                                    <a href="{{ route('score_index', $class->id) }}">
                                         <button
                                             class="inline-block rounded-md bg-gray-800 px-3 py-2 font-Notokhmer text-base text-green-100 shadow-md duration-75 hover:bg-gray-600">
                                             ពិន្ទុ

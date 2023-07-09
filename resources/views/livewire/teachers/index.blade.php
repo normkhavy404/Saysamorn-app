@@ -9,53 +9,46 @@
         <div class="relative overflow-x-auto sm:rounded-lg py-2">
             <div class="py-1 flex justify-between">
                 <a href="{{ route('create') }}"
-                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 font-Notokhmer text-base text-white">
+                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 font-Notokhmer text-base text-white hover:bg-blue-500">
                     បង្កើត
                 </a>
             </div>
             <div class="flex flex-col">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                    <div class="shadow overflow-hidden border border-gray-200 sm:rounded-lg">
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
                             <thead>
                                 <tr>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         លេខរៀង
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50  text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         អត្តលេខ
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         គោត្តនាម និង នាម
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         ភេទ
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         លេខទូរស័ព្ទ
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         អ៊ីម៉ែល
                                     </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 bg-gray-50 text-base font-Notokhmer text-gray-600">
+                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
                                         សមក្មភាព
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody class="bg-white divide-y divide-gray-200">
+                            <tbody class="bg-white divide-y divide-gray-200 text-black">
                                 @foreach ($teachers as $tea)
                                     <tr>
-                                        <td scope="col" class="px-6 py-3">
+                                        <td scope="col" class="px-6 py-3 text-base text-center">
                                             {{ $tea->id }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
+                                        <td scope="col" class="px-6 py-3 text-base">
                                             {{ $tea->code }}
                                         </td>
                                         <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
@@ -63,21 +56,21 @@
                                         </td>
                                         <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
                                             @if ($tea->gender == 1)
-                                                ប្រុស
+                                                ប
                                             @else
-                                                ស្រី
+                                                ស
                                             @endif
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
+                                        <td scope="col" class="px-6 py-3  text-center">
                                             {{ $tea->telephone }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
+                                        <td scope="col" class="px-6 py-3 text-base">
                                             {{ $tea->email }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 whitespace-nowrap text-sm font-medium ">
+                                        <td scope="col" class="px-6 py-3 whitespace-nowrap ">
                                             <div class=" flex px-6 py-3 justify-center">
                                                 <a href="{{ route('show', $tea->id) }}">
-                                                    <svg class="h-7 w-7 text-blue-500" fill="none"
+                                                    <svg class="h-6 w-6 text-blue-500" fill="none"
                                                         viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
                                                             stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -87,7 +80,7 @@
                                                     </svg>
                                                 </a>
                                                 <a href="{{ route('edit', $tea->id) }}">
-                                                    <svg class="h-7 w-7 text-green-500" viewBox="0 0 24 24"
+                                                    <svg class="h-6 w-6 text-green-500" viewBox="0 0 24 24"
                                                         stroke-width="2" stroke="currentColor" fill="none"
                                                         stroke-linecap="round" stroke-linejoin="round">
                                                         <path stroke="none" d="M0 0h24v24H0z" />
@@ -99,7 +92,7 @@
                                                     </svg>
                                                 </a>
                                                 <a wire:click="destroy({{ $tea->id }})">
-                                                    <svg class="h-7 w-7 text-red-500" width="24" height="24"
+                                                    <svg class="h-6 w-6 text-red-500" width="24" height="24"
                                                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                         fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                         <path stroke="none" d="M0 0h24v24H0z" />
@@ -119,7 +112,15 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $teachers->links() }}
+                        {{-- {{ $teachers->links() }} --}}
+                    </div>
+                    <div class="py-3 px-3">
+                        <div class="text-black text-base font-Notokhmer">
+                            <p>
+                                គ្រូបង្រៀនសរុប​ {{ count($teachers) }} នាក់
+                                ស្រី {{ $total_teacher }} នាក់
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,7 @@
                     <div class="px-4 sm:px-3">
                         <label for="code" class="block font-Notokhmer text-xl text-black">អត្តលេខ</label>
                         <input type="text" name="code" id="code" wire:model="code"
-                            class="form-input rounded-md shadow-sm mt-1 block w-full" />
+                            class="form-input rounded-md font-Notokhmer shadow-sm mt-1 block w-full" />
                         @error('code')
                             <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                         @enderror
@@ -31,7 +31,7 @@
                         <div class="w-full">
                             <label for="first_name" class="block font-Notokhmer text-xl text-black">នាមត្រកូល</label>
                             <input type="text" name="first_name" id="first_name" wire:model="first_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-full" />
+                                class="form-input rounded-md font-Notokhmer shadow-sm mt-1 block w-full" />
                             @error('first_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
@@ -39,7 +39,7 @@
                         <div class="w-full">
                             <label for="last_name" class="block font-Notokhmer text-xl text-black">នាមខ្លួន</label>
                             <input type="text" name="last_name" id="last_name" wire:model="last_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-full" />
+                                class="form-input rounded-md font-Notokhmer shadow-sm mt-1 block w-full" />
                             @error('last_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
@@ -61,7 +61,7 @@
                         @enderror
                     </div>
 
-                    <div class="px-4 sm:px-3 py-3">
+                    <div class="px-4 sm:px-3 py-6">
                         <label for="dob" class="block font-Notokhmer text-xl text-black">
                             ថ្ងៃខែឆ្នាំកំណើត
                         </label>
@@ -75,7 +75,7 @@
                         <div class="w-full">
                             <label for="fa_name" class="block font-Notokhmer text-xl text-black">ឪពុកឈ្មោះ</label>
                             <input type="text" wire:model="fa_name" name="fa_name" id="fa_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-full" />
+                                class="form-input rounded-md font-Notokhmer shadow-sm mt-1 block w-full" />
                             @error('fa_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
@@ -83,7 +83,7 @@
                         <div class="w-full">
                             <label for="mo_name" class="block font-Notokhmer text-xl text-black">ម្ដាយឈ្មោះ</label>
                             <input type="email" name="email" id="mo_name" wire:model="mo_name"
-                                class="form-input rounded-md shadow-sm mt-1 block w-full" />
+                                class="form-input rounded-md font-Notokhmer shadow-sm mt-1 block w-full" />
                             @error('mo_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror

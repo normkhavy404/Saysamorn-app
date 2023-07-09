@@ -31,7 +31,7 @@
                         <div class="w-full">
                             <label for="first_name" class="block font-Notokhmer text-xl text-black">នាមត្រកូល</label>
                             <input type="text" name="first_name" id="first_name" wire:model="first_name"
-                                class="form-input w-full rounded-md shadow-sm mt-1 block w-100" />
+                                class="form-input w-full font-Notokhmer  rounded-md shadow-sm mt-1 block w-100" />
                             @error('first_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror
@@ -39,7 +39,7 @@
                         <div class="w-full">
                             <label for="last_name" class="block font-Notokhmer text-xl text-black">នាមខ្លួន</label>
                             <input type="text" name="last_name" id="last_name" wire:model="last_name"
-                                class="form-input rounded-md w-full shadow-sm mt-1 block" />
+                                class="form-input font-Notokhmer rounded-md w-full shadow-sm mt-1 block" />
                             @error('last_name')
                                 <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                             @enderror

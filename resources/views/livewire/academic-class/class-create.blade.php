@@ -15,10 +15,10 @@
                 @endif
             </div>
         </div>
-        <div class="max-w-4xl mx-auto sm:px-3 lg:px-8">
+        <div class="max-w-4xl mx-auto py-5 sm:px-3 lg:px-8">
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <div class="shadow overflow-hidden sm:rounded-md">
-                    <div class="px-4 py-5 bg-white sm:p-6">
+                <div class="shadow-lg border border-gray-100 overflow-hidden sm:rounded-md">
+                    <div class="px-4 sm:p-3">
                         <label for="name_class" class="block font-Notokhmer text-base text-black">ឈ្មោះថ្នាក់</label>
                         <input type="text" name="name_class" id="name_year" wire:model="name_class"
                             class="form-input rounded-md shadow-sm mt-1 block w-full" />
@@ -42,7 +42,7 @@
                         @enderror
                     </div>
 
-                    <div class="px-4 py-5 bg-white sm:p-6">
+                    <div class="px-4 sm:p-3">
                         <label for="academic_year_id" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
                             ឆ្នាំសិក្សា
                         </label>

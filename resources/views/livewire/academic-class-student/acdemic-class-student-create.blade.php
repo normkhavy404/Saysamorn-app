@@ -4,7 +4,7 @@
             <p class=" text-base font-semibold font-Notokhmer">
                 ថ្នាក់សិក្សាសិស្ស
             </p>
-            <p class="text-base text-blue-500 font-Notokhmer">ចូរបំពេញព័ត៌មានខាងក្រោម</p>
+            <p class="text-base text-blue-500 font-Notokhmer">សូមជ្រើសរើសសិស្សដើម្បីទាញសិស្សចូលថ្នាក់</p>
         </div>
         <div class=" flex justify-between float-right">
             <div class=" text-blue-600 float-right">
@@ -35,38 +35,6 @@
                             <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-                    {{--
-                    <div class="px-4 py-5 bg-white sm:p-6">
-                        <label for="academic_year_id" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
-                            ថ្នាក់សិក្សា
-                        </label>
-                        <select id="academic_class_id" wire:model="academic_class_id"
-                            class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected>ជ្រើសរើស ថ្នាក់សិក្សា</option>
-                            @foreach ($academic_classes as $class)
-                            <option value="{{$class->id}}">{{$class->name_class}}</option>
-
-                            @endforeach
-                        </select>
-                        @error('academic_year_id')
-                            <p class="text-sm text-red-600">{{ $message }}</p>
-                        @enderror
-                    </div> --}}
-
-                    {{-- <div class="px-4 py-5 bg-white sm:p-6">
-                        <label for="status" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
-                            ស្ថានភាព
-                        </label>
-                        <select id="status" wire:model="status"
-                            class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected>ជ្រើសរើស ស្ថានភាព</option>
-                            <option value="1">កំពុងសិក្សា</option>
-                            <option value="2">ឈប់សិក្សា</option>
-                        </select>
-                        @error('gender')
-                            <p class="text-sm text-red-600">{{ $message }}</p>
-                        @enderror --}}
-
                 </div>
 
                 <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">

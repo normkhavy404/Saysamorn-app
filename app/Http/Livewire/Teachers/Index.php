@@ -4,14 +4,15 @@ namespace App\Http\Livewire\Teachers;
 
 use App\Models\Teacher;
 use Livewire\Component;
-use Livewire\WithPagination;
+
 
 class Index extends Component
 {
-    use WithPagination;
+    public $total_teacher;
     public function render()
     {
-        $teachers = Teacher::paginate(5);
+        $this->total_teacher = Teacher::where('teachers.gender', 2)->count();
+        $teachers = Teacher::all();
         return view('livewire.teachers.index', compact('teachers'));
     }
     public function destroy($id){

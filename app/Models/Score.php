@@ -15,6 +15,6 @@ class Score extends Model
         'khmer',
         'math',
         'science',
-        'social'
+        'socail'
     ];
 }
