@@ -43,37 +43,35 @@
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
                     <div class="shadow overflow-hidden border sm:rounded-sm">
                         <table class="w-full text-sm text-center divide-y divide-gray-200">
-                            <thead class=" text-base font-Notokhmer ">
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ល.រ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border  border-black">
-                                        អត្តលេខ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        នាម និងគោត្តនាម
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ភេទ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ថ្ងៃខែឆ្នាំកំណើត
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        អាយុ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ឈ្មោះឪពុក
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ឈ្មោះម្ដាយ
-                                    </th>
-                                    <th scope="col" class="px-6 py-3 border border-black">
-                                        ផ្សេងៗ
-                                    </th>
-                                </tr>
-                            </thead>
+                            <tr class=" text-base font-Notokhmer">
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ល.រ
+                                </th>
+                                <th scope="col" class="px-6 py-3 border  border-black">
+                                    អត្តលេខ
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    នាម និងគោត្តនាម
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ភេទ
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ថ្ងៃខែឆ្នាំកំណើត
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    អាយុ
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ឈ្មោះឪពុក
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ឈ្មោះម្ដាយ
+                                </th>
+                                <th scope="col" class="px-6 py-3 border border-black">
+                                    ផ្សេងៗ
+                                </th>
+                            </tr>
                             <tbody class="bg-white divide-y divide-gray-200 text-base font-Notokhmer">
                                 @foreach ($students as $class)
                                     <tr>
@@ -110,7 +108,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{-- {{ $this->students->links() }} --}}
                     </div>
                     <div class="py-3">
                         <p class="text-base text-black font-Notokhmer">
