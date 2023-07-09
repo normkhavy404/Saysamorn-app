@@ -88,7 +88,7 @@ Route::middleware('auth')->group(function () {
             ->middleware('signed')
             ->name('verification.verify');
 
-        Route::post('logout', LogoutController::class)
+        Route::get('logout', LogoutController::class)
             ->name('logout');
     Route::get('role', Role::class)->name('role');
     //teachers
