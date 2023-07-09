@@ -122,10 +122,10 @@
     </div>
 
 </aside>
-<div class="sticky position-absolute top-0 z-5 flex flex-col ml-auto mb-3 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] ">
+<div class="sticky  position-absolute top-0 z-5 flex flex-col ml-auto mb-3 lg:w-[75%] xl:w-[80%] 2xl:w-[85%] ">
     <div class="sticky z-10 top-0 h-16 border-b bg-blue-400 lg:py-2.5">
         <div class="px-10 flex items-center justify-between space-x-4 2xl:container">
-            <h5 hidden class="text-3xl text-black font-Notokhmer font-bold lg:block">ប្រព័ន្ធគ្រប់គ្រង សាលាបឋមសិក្សា
+            <h5 hidden class="text-3xl text-black font-muol font-bold lg:block">ប្រព័ន្ធគ្រប់គ្រង សាលាបឋមសិក្សា
                 សាយសាម៉ន</h5>
             <div class="flex space-x-4">
                 <img class="h-10 w-10 "src="{{ Storage::url('images/cambodia.png.png') }}" width="230"
