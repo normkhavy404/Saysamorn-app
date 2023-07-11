@@ -14,18 +14,6 @@
                         ថយក្រោយ
                     </a>
                 </div>
-                <div>
-                    <label for="" class="text-xl font-Notokhmer">ស្វែងរកតាមថ្ងៃ</label>
-                    <input class="pl-2" type="date" wire:model="date" class=" rounded-lg">
-                </div>
-                @if ($date)
-                    <div class="mt-2">
-                        <a wire:click="resetDate"
-                            class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-blue-600 text-base hover:bg-blue-500">
-                            មើលទាំងអស់
-                        </a>
-                    </div>
-                @endif
             </div>
             <div>
                 <a href="{{ route('attendent_create', $academic_class->id) }}"
@@ -33,7 +21,10 @@
                     ស្រង់អវត្តមាន
                 </a>
             </div>
-
+        </div>
+        <div class="ml-5">
+            <label for="" class="text-xl font-Notokhmer">ស្វែងរក</label>
+            <input class="pl-2 rounded-lg" type="date" wire:model="from_date">
         </div>
         <div class="flex flex-col">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
