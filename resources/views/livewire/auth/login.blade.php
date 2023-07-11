@@ -1,4 +1,4 @@
-@section('title', 'Saysamorn Primary School')
+@section('title', '')
 <div>
     <div class="mt-6 sm:mx-auto sm:w-full sm:max-w-md">
 

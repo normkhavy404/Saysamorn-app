@@ -9,7 +9,7 @@
     @else
         <title>{{ config('app.name') }}</title>
     @endif --}}
-    <title>Saysamorn Primary School</title>
+    <title class="text-base font-muol">សាលាបឋមសិក្សា សាយសាម៉ន</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">

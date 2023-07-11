@@ -121,59 +121,5 @@
                 </div>
             </div>
         </div>
-        {{-- <div class=" grid grid-cols-6 gap-4 sm:py-1 ">
-            <button
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-Notokhmer text-5xl rounded-xl px-10 py-8 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                មករា
-            </button>
-
-            <button
-                class="py-8 px-10 mr-2 mb-2 text-5xl font-Notokhmer text-white focus:outline-none bg-blue-700 rounded-xl border  hover:bg-blue-800 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-700 dark:bg-blue-600  dark:border-blue-600 dark:hover:text-white dark:hover:bg-blue-700">
-                កុម្ភៈ
-            </button>
-
-            <button
-                class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-Notokhmer rounded-xl text-5xl mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-700 dark:border-blue-700">
-                មីនា
-            </button>
-            <button
-                class="text-white bg-white border border-blue-300 focus:outline-none hover:bg-blue-100 focus:ring-4 focus:ring-blue-200 font-Notokhmer rounded-xl text-5xl mr-2 mb-2 dark:bg-blue-600 dark:text-white dark:border-blue-600 dark:hover:bg-blue-700 dark:hover:border-blue-600 dark:focus:ring-blue-700">
-                មេសា
-            </button>
-            <button
-                class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-Notokhmer rounded-xl text-5xl px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
-                ឧសភា
-            </button>
-            <button
-                class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-Notokhmer rounded-xl text-5xl px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
-                មិថុនា
-            </button>
-            <button
-                class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-Notokhmer rounded-xl text-5xl px-10 py-8 text-center mr-2 mb-2 dark:focus:ring-yellow-900">
-                កក្កដា
-            </button>
-            <button
-                class="text-white bg-cyan-700 hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 font-Notokhmer rounded-xl text-5xl text-center mb-2 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-900">
-                សីហា
-            </button>
-            <button
-                class="text-white bg-slate-950 hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-slate-300 font-Notokhmer rounded-xl text-5xl text-center mb-2 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-900">
-                កញ្ញា
-            </button>
-            <button
-                class="text-white bg-orange-700 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-orange-300 font-Notokhmer rounded-xl text-5xl text-center mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-900">
-                តុលា
-            </button>
-            <button
-                class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-Notokhmer rounded-xl text-5xl px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                វិច្ឆិកា
-            </button>
-            <button
-                class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-Notokhmer rounded-xl text-5xl px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                ធ្នូ
-            </button>
-
-
-        </div> --}}
     </div>
 </div>
