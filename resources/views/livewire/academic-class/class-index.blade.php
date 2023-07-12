@@ -97,10 +97,9 @@
             <div class=" ml-2 grid grid-cols-3 gap-2 py-1">
                 <tbody>
                     @foreach ($academic_classes as $class)
-                        <div
-                            class="w-full border max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300 hover:scale-105 hover:shadow-xl">
+                        <div class="w-full border max-w-sm overflow-hidden rounded-lg bg-white shadow-md duration-300">
                             <div class=" text-center py-2">
-                                <p class="text-6xl font-Notokhmer">{{ $class->name_class }}</p>
+                                <p class="text-5xl font-Notokhmer">{{ $class->name_class }}</p>
                             </div>
                             <h1 class="mt-2 text-center text-2xl font-Notokhmer text-gray-900">{{ $class->first_name }}
                                 {{ $class->last_name }}</h1>
