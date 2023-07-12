@@ -17,8 +17,12 @@
             </div>
             <div>
                 <a href="{{ route('attendent_create', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
+                    class="px-8 mr-3 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
                     ស្រង់អវត្តមាន
+                </a>
+                <a href="{{ route('attendent_report', $academic_class->id) }}"
+                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
+                    របាយការណ៍អវត្តមាន
                 </a>
             </div>
         </div>

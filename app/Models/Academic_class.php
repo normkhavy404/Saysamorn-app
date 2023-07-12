@@ -13,4 +13,9 @@ class Academic_class extends Model
         'teacher_id',
         'academic_year_id'
     ];
+
+    public function academicYear()
+    {
+        return $this->belongsTo(Academic_year::class);
+    }
 }

@@ -23,6 +23,7 @@ use App\Http\Livewire\AcademicYear\YearShow;
 use App\Http\Livewire\Attendent\AttCreate;
 use App\Http\Livewire\Attendent\AttEdit;
 use App\Http\Livewire\Attendent\AttIndex;
+use App\Http\Livewire\Attendent\AttReport;
 use App\Http\Livewire\Attendent\AttShow;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Passwords\Confirm;
@@ -136,6 +137,7 @@ Route::middleware('auth')->group(function () {
     Route::get('attendent/create/{id}', AttCreate::class)->name('attendent_create');
     Route::get('attendent/edit/{id}', AttEdit::class)->name('attendent_edit');
     Route::get('attendent/show/{id}', AttShow::class)->name('attendent_show');
+    Route::get('attendent/report/{id}', AttReport::class)->name('attendent_report');
 
 
 
