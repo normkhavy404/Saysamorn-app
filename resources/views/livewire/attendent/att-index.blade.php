@@ -10,14 +10,14 @@
             <div class="flex gap-5">
                 <div class="mt-2">
                     <a href="{{ route('class_index') }}"
-                        class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-blue-600 text-base hover:bg-blue-500">
-                        ថយក្រោយ
+                        class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-red-800 text-base hover:bg-red-700">
+                        ចាកចេញ
                     </a>
                 </div>
             </div>
             <div>
                 <a href="{{ route('attendent_create', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-green-600 font-Notokhmer text-base text-white hover:bg-green-500">
+                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
                     ស្រង់អវត្តមាន
                 </a>
             </div>
@@ -83,6 +83,17 @@
                                     </td>
                                     <td scope="col" class="px-6 py-3 border border-black">
                                         <div class=" flex px-6 py-3 justify-center">
+                                            <a href="{{ route('attendent_edit', $academic_class->id) }}">
+                                                <svg class="h-7 w-7 text-green-500" viewBox="0 0 24 24" stroke-width="2"
+                                                    stroke="currentColor" fill="none" stroke-linecap="round"
+                                                    stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                                    <path
+                                                        d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                                    <line x1="16" y1="5" x2="19" y2="8" />
+                                                </svg>
+                                            </a>
                                             <a wire:click="DestroyAtt ({{ $academic_class->id }})">
                                                 <svg class="h-5 w-5 text-red-500" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"

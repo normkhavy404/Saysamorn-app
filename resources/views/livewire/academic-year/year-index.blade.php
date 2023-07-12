@@ -9,8 +9,8 @@
         <div class="relative overflow-x-auto  sm:rounded-lg">
             <div class="py-2 flex justify-between ">
                 <a href="{{ route('year_create') }}"
-                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8  font-semibold text-white  ">
-                    ការបង្កើត
+                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 font-Notokhmer text-white  ">
+                    បង្កើតឆ្នាំសិក្សាថ្មី
                 </a>
             </div>
             <div class="flex flex-col">
@@ -19,22 +19,22 @@
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="px-6 py-3 ">
-                                        ID
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black">
+                                        លេខរៀង
                                     </th>
-                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base">
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black">
                                         ឆ្នាំសិក្សា
                                     </th>
-                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base ">
-                                        ថ្ងៃចាប់ផ្ដើម
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black">
+                                        ថ្ងៃខែឆ្នាំចាប់ផ្ដើម
                                     </th>
-                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base">
-                                        ថ្ងៃបញ្ចប់
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black">
+                                        ថ្ងៃខែឆ្នាំបញ្ចប់
                                     </th>
-                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base">
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black">
                                         ស្ថានភាព
                                     </th>
-                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base">
+                                    <th scope="col" class="px-6 py-3 font-Notokhmer text-base border border-black ">
                                         សកម្មភាព
                                     </th>
                                 </tr>
@@ -42,20 +42,21 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($academic_years as $year)
                                     <tr>
-                                        <td scope="col" class="px-6 py-3  ">
+                                        <td scope="col" class="px-6 py-3  border border-black">
                                             {{ $year->id }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
+                                        <td scope="col" class="px-6 py-3 border border-black">
                                             {{ $year->name_year }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
-                                            {{ $year->start_date }}
+                                        <td scope="col" class="px-6 py-3 border border-black">
+                                            {{ date('d-m-Y', strtotime($year->start_date)) }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 ">
-                                            {{ $year->end_date }}
+                                        <td scope="col" class="px-6 py-3 border border-black">
+                                            {{ date('d-m-Y', strtotime($year->end_date)) }}
                                         </td>
 
-                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
+                                        <td scope="col"
+                                            class="px-6 py-3 font-Notokhmer text-base text-gray-700 border border-black">
                                             @if ($year->status == 1)
                                                 កំពុងសិក្សា
                                             @elseif($year->status == 2)
@@ -66,7 +67,8 @@
 
                                         </td>
 
-                                        <td scope="col" class="px-6 py-3 whitespace-nowrap text-sm font-medium ">
+                                        <td scope="col"
+                                            class="px-6 py-3 whitespace-nowrap text-sm font-medium border border-black">
                                             <div class=" flex px-6 py-3 justify-center">
                                                 <a href="{{ route('year_show', $year->id) }}">
                                                     <svg class="h-7 w-7 text-blue-500" fill="none"

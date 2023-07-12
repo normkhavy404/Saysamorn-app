@@ -6,18 +6,9 @@
             </p>
             <p class=" text-base text-blue-500 font-Notokhmer">ចូរបំពេញព័ត៍មានខាងក្រោម</p>
         </div>
-        <div
-            class=" mt-3 inline-flex items-center px-4 py-2 bg-green-600 border border-transparent rounded-md font-Notokhmer text-base text-white hover:bg-green-700">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-4 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-            </svg>
-            <a href="{{ route('student_index') }}">
-                ថយក្រោយ
-            </a>
-        </div>
+
         <div class="max-w-4xl mx-auto sm:px-1 lg:px-8">
-            <div class="mt-5 border border-slate-400 rounded-lg shadow-lg">
+            <div class="mt-4 border rounded-lg shadow-lg">
                 <div class=" overflow-hidden sm:rounded-md">
                     <div class="px-4 sm:px-3">
                         <label for="code" class="block font-Notokhmer text-xl text-black">អត្តលេខ</label>
@@ -90,6 +81,18 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-end px-4 py-3 text-right sm:px-6">
+                        <div
+                            class="inline-flex items-center px-4 py-2 bg-red-800 border border-transparent rounded-md font-Notokhmer text-base text-white hover:bg-red-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-4 h-4 -ml-2 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                            </svg>
+                            <a href="{{ route('student_index') }}">
+                                ចាកចេញ
+                            </a>
+                        </div>
+                        |
                         <button wire:click="CreateOnStudent"
                             class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-semibold text-base font-Notokhmer text-white uppercase tracking-widest hover:bg-blue-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"

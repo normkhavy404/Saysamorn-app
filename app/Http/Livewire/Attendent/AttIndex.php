@@ -39,7 +39,5 @@ class AttIndex extends Component
         $attendents->Delete();
     }
 
-    public function resetDate() {
-        $this->date =null;
-    }
+
 }

@@ -1,11 +1,13 @@
 <div>
     <div class=" ml-60 mx-2">
         <div>
-            <div class="py-2 flex justify-between">
-                <a href="{{ route('class_index') }}"
-                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 text-base font-Notokhmer text-white  ">
-                    ថយក្រោយ
-                </a>
+            <div class="py-2 px-6 flex">
+                <div
+                    class="hover:shadow-form rounded-md bg-red-800 hover:bg-red-700 py-3 px-8 text-base font-Notokhmer text-white">
+                    <a href="{{ route('class_index') }}">
+                        ចាកចេញ
+                    </a>
+                </div>
             </div>
             <div class="flex justify-end">
                 <button class="text-black px-6 py-3 border border-black rounded-md font-Notokhmer"
@@ -91,7 +93,7 @@
                                             {{ $class->gender == 1 ? 'ប' : 'ស' }}
                                         </td>
                                         <td scope="col" class="px-6 py-3 border border-black">
-                                            {{ $class->dob }}
+                                            {{ date('d-m-Y', strtotime($class->dob)) }}
                                         </td>
                                         <td scope="col" class="px-6 py-3 border border-black">
                                             {{ calcAge($class->dob) }}

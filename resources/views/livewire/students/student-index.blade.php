@@ -19,11 +19,11 @@
             <div class="py-2 flex justify-between">
                 <a href="{{ route('student_create') }}"
                     class="hover:shadow-form rounded-md bg-blue-700 py-3 px-8 text-base font-Notokhmer text-white hover:bg-blue-600">
-                    បង្កើត
+                    បញ្ចូលសិស្សថ្មី
                 </a>
                 <div>
-                    <label for="search" class="text-base text-black">ស្វែងរក</label>
-                    <input type="text" class=" rounded-md">
+                    <label for="search" class="text-base text-black font-Notokhmer">ស្វែងរក</label>
+                    <input wire:model="search" type="text" class=" rounded-md">
                 </div>
             </div>
             <div class="flex flex-col">
@@ -79,7 +79,7 @@
                                             @endif
                                         </td>
                                         <td scope="col" class="px-4 py-2">
-                                            {{ $stu->dob }}
+                                            {{ date('d-m-Y', strtotime($stu->dob)) }}
                                         </td>
                                         <td scope="col" class="px-4 py-2 font-Notokhmer text-base text-black">
                                             {{ $stu->fa_name }}

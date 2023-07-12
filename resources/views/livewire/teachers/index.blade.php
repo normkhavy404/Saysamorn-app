@@ -10,34 +10,47 @@
             <div class="py-1 flex justify-between">
                 <a href="{{ route('create') }}"
                     class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 font-Notokhmer text-base text-white hover:bg-blue-500">
-                    បង្កើត
+                    បញ្ចូលគ្រូថ្មី
                 </a>
+                <div class="flex justify-end">
+                    <button class="text-black px-6 py-3 border border-black rounded-md font-Notokhmer"
+                        onclick="printDiv('printMe')">
+                        បោះពុម្ភ
+                    </button>
+                </div>
             </div>
             <div class="flex flex-col">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
                     <div class="shadow overflow-hidden border border-gray-200 sm:rounded-lg">
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
                             <thead>
-                                <tr>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                <tr class="border">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border border-black">
                                         លេខរៀង
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border-black border">
                                         អត្តលេខ
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border border-black">
                                         គោត្តនាម និង នាម
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border border-black">
                                         ភេទ
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border border-black">
                                         លេខទូរស័ព្ទ
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border-black border">
                                         អ៊ីម៉ែល
                                     </th>
-                                    <th scope="col" class="px-6 py-3 text-base font-Notokhmer text-black">
+                                    <th scope="col"
+                                        class="px-6 py-3 text-base font-Notokhmer text-black border border-black ">
                                         សមក្មភាព
                                     </th>
                                 </tr>
@@ -45,29 +58,31 @@
                             <tbody class="bg-white divide-y divide-gray-200 text-black">
                                 @foreach ($teachers as $tea)
                                     <tr>
-                                        <td scope="col" class="px-6 py-3 text-base text-center">
+                                        <td scope="col" class="px-6 py-3 text-base text-center border border-black">
                                             {{ $tea->id }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-base">
+                                        <td scope="col" class="px-6 py-3 text-base border-black border">
                                             {{ $tea->code }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
+                                        <td scope="col"
+                                            class="px-6 py-3 font-Notokhmer text-base text-gray-700 border border-black">
                                             {{ $tea->first_name }} {{ $tea->last_name }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 font-Notokhmer text-base text-gray-700">
+                                        <td scope="col"
+                                            class="px-6 py-3 font-Notokhmer text-base text-gray-700 border border-black">
                                             @if ($tea->gender == 1)
                                                 ប
                                             @else
                                                 ស
                                             @endif
                                         </td>
-                                        <td scope="col" class="px-6 py-3  text-center">
+                                        <td scope="col" class="px-6 py-3  text-center border border-black">
                                             {{ $tea->telephone }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-base">
+                                        <td scope="col" class="px-6 py-3 text-base border border-black">
                                             {{ $tea->email }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 whitespace-nowrap ">
+                                        <td scope="col" class="px-6 py-3 whitespace-nowrap border border-black ">
                                             <div class=" flex px-6 py-3 justify-center">
                                                 <a href="{{ route('show', $tea->id) }}">
                                                     <svg class="h-6 w-6 text-blue-500" fill="none"

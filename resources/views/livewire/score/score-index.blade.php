@@ -9,11 +9,11 @@
 
         <div class=" py-7 flex justify-between">
             <a href="{{ route('class_index') }}"
-                class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-blue-600 text-base hover:bg-blue-500">
-                ថយក្រោយ
+                class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-red-800 text-base hover:bg-red-700">
+                ចាកចេញ
             </a>
             <a href="{{ route('score_create', $academic_class->id) }}"
-                class="px-8 py-3 border rounded-md bg-green-600 font-Notokhmer text-base text-white hover:bg-green-500">
+                class="px-8 py-3 border rounded-md bg-blue-800 font-Notokhmer text-base text-white hover:bg-blue-700">
                 បញ្ចូលពិន្ទុ
             </a>
         </div>
