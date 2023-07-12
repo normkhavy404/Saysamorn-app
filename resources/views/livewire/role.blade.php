@@ -1,5 +1,5 @@
 <div>
-    <div class="ml-60 px-2">
+    <div style="margin-left: 16vw; margin-right: 20px">
         <div class="block w-full p-3 border border-gray-200 rounded-lg shadow">
             <p class=" text-base font-semibold font-Notokhmer">
                 តួនាទី
@@ -28,7 +28,7 @@
         </div>
     </div>
 
-    <div class="ml-60 px-2 py-3">
+    <div style="margin-left: 16vw; margin-right: 20px" class="py-5">
         <div class="p-4 bg-gray-100 border border-gray-400 rounded-lg shadow-lg ">
             <ul>
                 @foreach ($roles as $ro)

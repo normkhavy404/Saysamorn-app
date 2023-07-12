@@ -1,5 +1,5 @@
 <div>
-    <div class=" ml-60 mx-2">
+    <div style="margin-left: 16vw; margin-right: 20px">
         <div>
             <div class="py-2 px-6 flex">
                 <div

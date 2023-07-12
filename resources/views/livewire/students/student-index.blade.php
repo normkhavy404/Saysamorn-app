@@ -1,5 +1,5 @@
 <div>
-    <div class=" ml-60 mx-2">
+    <div style="margin-left: 16vw; margin-right: 20px">
         <div class="block w-full p-3 border border-gray-200 rounded-lg shadow ">
             <p class=" text-sm font-semibold font-Notokhmer">
                 សិស្ស
