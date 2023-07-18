@@ -7,15 +7,6 @@
             <p class=" text-base text-blue-500 font-Notokhmer">បញ្ជីឈ្មោះសិស្សសរុបនៅសាលាបឋមសិក្សា សាយសាម៉ន</p>
         </div>
         <div class="relative overflow-x-auto sm:rounded-lg">
-            <div class=" flex justify-between float-right">
-                <div class=" text-blue-600 float-right">
-                    @if (session()->has('success'))
-                        <div class="alert alert-success">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-                </div>
-            </div>
             <div class="py-2 flex justify-between">
                 <a href="{{ route('student_create') }}"
                     class="hover:shadow-form rounded-md bg-blue-700 py-3 px-8 text-base font-Notokhmer text-white hover:bg-blue-600">
@@ -23,37 +14,37 @@
                 </a>
                 <div>
                     <label for="search" class="text-base text-black font-Notokhmer">ស្វែងរក</label>
-                    <input wire:model="search" type="text" class=" rounded-md">
+                    <input wire:model="search" type="search" class="rounded-md" placeholder="ស្វែងរក...">
                 </div>
             </div>
             <div class="flex flex-col">
                 <div class="py-2 align-middle inline-block sm:px-6 lg:px-1">
-                    <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                    <div class="shadow overflow-hidden border border-gray-200 sm:rounded-lg">
                         <table class="w-full text-sm text-center border divide-y divide-gray-200">
                             <thead class="text-base font-Notokhmer text-gray-900">
                                 <tr>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         លេខរៀង
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         អត្តលេខ
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         គោត្តនាម និង នាម
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         ភេទ
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         ថ្ងៃខែឆ្នាំកំណើត
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         ឈ្មោះឪពុក
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         ឈ្មោះម្ដាយ
                                     </th>
-                                    <th scope="col" class="px-4 py-2 ">
+                                    <th scope="col" class="px-4 py-2 border border-gray-900">
                                         សកម្មភាព
                                     </th>
                                 </tr>
@@ -61,35 +52,39 @@
                             <tbody class="bg-white divide-y divide-gray-200">
                                 @foreach ($students as $stu)
                                     <tr>
-                                        <td scope="col" class="px-4 py-2">
+                                        <td scope="col" class="px-2 py-1 border border-gray-900 ">
                                             {{ $stu->id }}
                                         </td>
-                                        <td scope="col" class="px-4 py-2">
+                                        <td scope="col" class="px-4 py-2 border border-gray-900">
                                             {{ $stu->code }}
                                         </td>
-                                        <td scope="col" class="px-4 py-2 font-Notokhmer text-base text-black">
+                                        <td scope="col"
+                                            class="px-4 py-2 font-Notokhmer text-base text-black border border-gray-900">
                                             {{ $stu->first_name }} {{ $stu->last_name }}
                                         </td>
                                         <td scope="col"
-                                            class="px-4 py-2px-4 py-2 font-Notokhmer text-base text-black">
+                                            class="px-4 py-2px-4 py-2 font-Notokhmer text-base text-black border border-gray-900">
                                             @if ($stu->gender == 1)
                                                 ប
                                             @else
                                                 ស
                                             @endif
                                         </td>
-                                        <td scope="col" class="px-4 py-2">
+                                        <td scope="col" class="px-4 py-2 border border-gray-900">
                                             {{ date('d-m-Y', strtotime($stu->dob)) }}
                                         </td>
-                                        <td scope="col" class="px-4 py-2 font-Notokhmer text-base text-black">
+                                        <td scope="col"
+                                            class="px-4 py-2 font-Notokhmer text-base text-black border border-gray-900">
                                             {{ $stu->fa_name }}
                                         </td>
-                                        <td scope="col" class="px-4 py-2 font-Notokhmer text-base text-black">
+                                        <td scope="col"
+                                            class="px-4 py-2 font-Notokhmer text-base text-black border border-gray-900">
                                             {{ $stu->mo_name }}
                                         </td>
-                                        <td scope="col" class="px-4 py-2 whitespace-nowrap">
+                                        <td scope="col"
+                                            class="px-4 py-2 whitespace-nowrap border border-gray-900   ">
                                             <div class=" flex px-6 py-3 justify-center">
-                                                <a href="{{ route('student_show', $stu->id) }}">
+                                                {{-- <a href="{{ route('student_show', $stu->id) }}">
                                                     <svg class="h-5 w-5 text-blue-500" fill="none"
                                                         viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -98,7 +93,7 @@
                                                             stroke-width="2"
                                                             d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                                     </svg>
-                                                </a>
+                                                </a> --}}
                                                 <a href="{{ route('student_edit', $stu->id) }}">
                                                     <svg class="h-5 w-5 text-green-500" viewBox="0 0 24 24"
                                                         stroke-width="2" stroke="currentColor" fill="none"
@@ -132,7 +127,9 @@
                                 @endforeach
                             </tbody>
                         </table>
-                        {{ $students->links() }}
+                        <div>
+                            {{ $students->links() }}
+                        </div>
                     </div>
                     <div class="py-3">
                         <p class="text-base text-black font-Notokhmer">

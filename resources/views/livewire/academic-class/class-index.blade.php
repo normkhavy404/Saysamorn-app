@@ -4,7 +4,7 @@
             <p class=" text-base font-semibold font-Notokhmer">
                 ថ្នាក់សិក្សា
             </p>
-            <p class=" text-base text-blue-500  font-Notokhmer">បញ្ជីឈ្មោះថ្នាក់សិក្សា</p>
+            <p class=" text-base text-blue-500 font-Notokhmer">បញ្ជីឈ្មោះថ្នាក់សិក្សា</p>
         </div>
         <div class="relative overflow-x-auto  sm:rounded-lg">
             <div class=" flex justify-between float-right">
@@ -18,8 +18,8 @@
             </div>
             <div class="py-2 flex justify-between ">
                 <a href="{{ route('class_create') }}"
-                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8  font-semibold text-white  ">
-                    ការបង្កើត
+                    class="hover:shadow-form rounded-md bg-blue-600 py-3 px-8 font-Notokhmer text-white  ">
+                    បង្កើតថ្នាក់សិក្សា
                 </a>
             </div>
             {{-- <div class="flex flex-col">

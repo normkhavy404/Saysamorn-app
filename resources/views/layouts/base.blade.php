@@ -19,7 +19,6 @@
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @livewireStyles
-    @livewireScripts
 
 
     <!-- CSRF Token -->
@@ -29,7 +28,10 @@
 <body>
     @yield('body')
 
+    @livewireScripts
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <x-livewire-alert::scripts />
 </body>

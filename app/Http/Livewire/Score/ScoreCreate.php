@@ -13,7 +13,7 @@ class ScoreCreate extends Component
 
     protected $rules =[
         'academic_class_student_id' => 'required',
-        // 'semester'                  => 'required',
+        'semester'                  => 'required',
         'type'                      => 'required',
         'khmer'                     => 'required',
         'math'                      => 'required',
@@ -22,11 +22,12 @@ class ScoreCreate extends Component
     ];
     protected $messages = [
         'academic_class_student_id.required'  => 'សូមជ្រើសរើសសិស្សដែលត្រូវដាក់ពិន្ទុ',
+        'semester.required'                   => 'សូមជ្រើសរើសឆមាស',
         'type.required'                       => 'សូមជ្រើសរើសខែ',
         'khmer.required'                      =>  'សូមបំពេញពិន្ទុមុខវិជ្ជាភាសាខ្មែរ',
         'math.required'                       =>  'សូមបំពេញពិន្ទុមុខវិជ្ជាគណិតវិទ្យា',
         'science.required'                    =>  'សូមបំពេញពិន្ទុមុខវិជ្ជាវិទ្យាសាស្រ្ត',
-        'socail.required'                     =>  'សូមបំពេញពិន្ទុមុខវិជ្ជាសិក្សាស',
+        'socail.required'                     =>  'សូមបំពេញពិន្ទុមុខវិជ្ជាសិក្សាសង្គម',
     ];
     public function updated($propertyName)
     {
@@ -56,7 +57,6 @@ class ScoreCreate extends Component
         $score->math = $this->math;
         $score->science = $this->science;
         $score->socail = $this->socail;
-        dd($score);
         $score->save();
 
     }

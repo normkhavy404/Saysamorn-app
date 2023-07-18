@@ -12,22 +12,28 @@
                 class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-red-800 text-base hover:bg-red-700">
                 ចាកចេញ
             </a>
-            <a href="{{ route('score_create', $academic_class->id) }}"
-                class="px-8 py-3 border rounded-md bg-blue-800 font-Notokhmer text-base text-white hover:bg-blue-700">
-                បញ្ចូលពិន្ទុ
-            </a>
+            <div>
+                <a href="{{ route('score_create', $academic_class->id) }}"
+                    class="px-8 py-3 border rounded-md bg-blue-800 font-Notokhmer text-base text-white hover:bg-blue-700">
+                    បញ្ចូលពិន្ទុ
+                </a>
+                <a href="{{ route('score_report', $academic_class->id) }}"
+                    class="px-8 py-3 border rounded-md bg-green-800 font-Notokhmer text-base text-white hover:bg-green-700">
+                    របាយការណ៍ពិន្ទុ
+                </a>
+            </div>
         </div>
         <div class="flex flex-col">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
                 <div class="shadow-lg overflow-hidden border sm:rounded-md">
                     <table class="w-full text-sm text-center font-moul border divide-y divide-gray-200">
-                        <thead class="text-base font-Notokhmer">
-                            <tr>
+                        <thead>
+                            <tr class="text-base font-Notokhmer">
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     ល.រ
                                 </th>
                                 <th scope="col" class="px-6 py-3 border border-black">
-                                    នាម និងគោត្តនាម
+                                    ឈ្មោះសិស្ស
                                 </th>
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     ភេទ
@@ -50,12 +56,15 @@
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     សិក្សាសង្គម
                                 </th>
-                                <td scope="col" class="px-6 py-3 border border-black  ">
+                                <td scope="col" class="px-6 py-3 border border-black font-Notokhmer font-bold ">
+                                    សរុប
+                                </td>
+                                {{-- <td scope="col" class="px-6 py-3 border border-black  font-bold">
                                     មធ្យមភាគ
                                 </td>
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     និទេ្ទស
-                                </th>
+                                </th> --}}
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     សកម្មភាព
                                 </th>
@@ -79,11 +88,11 @@
                                             ស
                                         @endif
                                     </td>
-                                    <td scope="col" class="px-6 py-3 border border-black">
+                                    <td scope="col" class="px-6 py-3 border border-black font-Notokhmer">
                                         @if ($scor->semester == 1)
-                                            ឆមាស ១
+                                            1
                                         @else
-                                            ឆមាស ២
+                                            2
                                         @endif
                                     </td>
                                     <td scope="col"
@@ -132,24 +141,18 @@
                                     </td>
                                     <td scope="col"
                                         class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
-
+                                        {{ $scor->khmer + $scor->math + $scor->science + $scor->socail }}
+                                    </td>
+                                    {{-- <td scope="col"
+                                        class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
+                                        {{ ($scor->khmer + $scor->math + $scor->science + $scor->socail) / 4 }}
                                     </td>
                                     <td scope="col"
                                         class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
 
-                                    </td>
+                                    </td> --}}
                                     <td scope="col" class="px-6 py-3 border border-black">
                                         <div class=" flex px-6 py-3 justify-center">
-                                            <a href="{{ route('score_show', $academic_class->id) }}">
-                                                <svg class="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24"
-                                                    stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        stroke-width="2"
-                                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                </svg>
-                                            </a>
                                             <a href="{{ route('score_edit', $academic_class->id) }}">
                                                 <svg class="h-5 w-5 text-green-500" viewBox="0 0 24 24" stroke-width="2"
                                                     stroke="currentColor" fill="none" stroke-linecap="round"
@@ -161,15 +164,13 @@
                                                     <line x1="16" y1="5" x2="19" y2="8" />
                                                 </svg>
                                             </a>
-                                            <a wire:click="DestroyAtt ({{ $academic_class->id }})">
+                                            <a wire:click="AttDelete ({{ $academic_class->id }})">
                                                 <svg class="h-5 w-5 text-red-500" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" />
-                                                    <line x1="4" y1="7" x2="20"
-                                                        y2="7" />
-                                                    <line x1="10" y1="11" x2="10"
-                                                        y2="17" />
+                                                    <line x1="4" y1="7" x2="20" y2="7" />
+                                                    <line x1="10" y1="11" x2="10" y2="17" />
                                                     <line x1="14" y1="11" x2="14"
                                                         y2="17" />
                                                     <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />

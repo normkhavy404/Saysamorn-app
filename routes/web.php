@@ -36,6 +36,7 @@ use App\Http\Livewire\Role;
 use App\Http\Livewire\Score\ScoreCreate;
 use App\Http\Livewire\Score\ScoreEdit;
 use App\Http\Livewire\Score\ScoreIndex;
+use App\Http\Livewire\Score\ScoreReport;
 use App\Http\Livewire\Score\ScoreShow;
 
 use App\Http\Livewire\Students\StudentCreate;
@@ -46,6 +47,7 @@ use App\Http\Livewire\Students\StudentShow;
 use App\Http\Livewire\Teachers\Create;
 use App\Http\Livewire\Teachers\Edit;
 use App\Http\Livewire\Teachers\Index;
+use App\Http\Livewire\Teachers\Report;
 use App\Http\Livewire\Teachers\Show;
 use Illuminate\Support\Facades\Route;
 
@@ -97,6 +99,7 @@ Route::middleware('auth')->group(function () {
     Route::get('teahcer/create',Create::class)->name('create');
     Route::get('teacher/edit/{id}', Edit::class)->name('edit');
     Route::get('teacher/show/{id}', Show::class)->name('show');
+    Route::get('teacher/report', Report::class)->name('report');
 
     //students
     Route::get('studnet/index', StudentIndex::class)->name('student_index');
@@ -130,6 +133,7 @@ Route::middleware('auth')->group(function () {
     Route::get('score/create/{id}', ScoreCreate::class)->name('score_create');
     Route::get('score/edit/{id}', ScoreEdit::class)->name('score_edit');
     Route::get('score/show/{id}', ScoreShow::class)->name('score_show');
+    Route::get('score/report/{id}', ScoreReport::class)->name('score_report');
 
     //Attendent
 

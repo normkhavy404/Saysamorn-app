@@ -31,12 +31,12 @@
                         </label>
                         <select id="teacher_id" wire:model="semester"
                             class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected>ជ្រើសរើស​ ប្រភេទ</option>
+                            <option selected>ជ្រើសរើស​ ឆមាស</option>
                             <option value="1">
-                                ឆមាស ១
+                                ឆមាស 1
                             </option>
                             <option value="2">
-                                ឆមាស​ ២
+                                ឆមាស​ 2
                             </option>
                         </select>
                         @error('semester')
@@ -94,43 +94,48 @@
                             <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="px-4 sm:p-3 flex grid-cols-4 gap-1">
+                    <div class="text-center font-bold text-2xl">បញ្ចូលពិន្ទុ</div>
+                    <div class=" flex justify-around mt-4">
                         <div>
-                            <label for="khmer" class="text-base font-Notokhmer">ភាសាខ្មែរ</label>
-                            <input type="text" wire:model="khmer" name="khmer" id="khmer"
-                                class="px-2 py-1 rounded-md shadow-sm">
-                            @error('khmer')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
+                            <div class="ml-4">
+                                <label for="khmer" class="text-base font-Notokhmer">ភាសាខ្មែរ</label>
+                                <input type="text" wire:model="khmer" name="khmer" id="khmer"
+                                    class="px-2 py-1 rounded-md shadow-sm ml-2">
+                                @error('khmer')
+                                    <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
+                                @enderror
+                            </div>
+
+                            <div class="ml-4 my-5">
+                                <label for="math" class="text-base font-Notokhmer">គណិតវិទ្យា</label>
+                                <input type="text" name="math" wire:model="math" id="math"
+                                    class="px-2 py-1 rounded-md shadow-sm">
+                                @error('math')
+                                    <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
+                                @enderror
+                            </div>
                         </div>
 
                         <div>
-                            <label for="math" class="text-base font-Notokhmer">គណិតវិទ្យា</label>
-                            <input type="text" name="math" wire:model="math" id="math"
-                                class="px-2 py-1 rounded-md shadow-sm">
-                            @error('math')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
+                            <div class="mr-4 ml-2">
+                                <label for="science" class="text-base font-Notokhmer">វិទ្យាសាស្រ្ត</label>
+                                <input type="text" wire:model="science" name="sciencce" id="sciencce"
+                                    class="px-2 py-1 rounded-md shadow-sm">
+                                @error('science')
+                                    <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
+                                @enderror
+                            </div>
 
-                        <div>
-                            <label for="science" class="text-base font-Notokhmer">វិទ្យាសាស្រ្ត</label>
-                            <input type="text" wire:model="science" name="sciencce" id="sciencce"
-                                class="px-2 py-1 rounded-md shadow-sm">
-                            @error('science')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
+                            <div class="mr-3 my-5 ml-1">
+                                <label for="socail" class="text-base font-Notokhmer">សិក្សាសង្គម</label>
+                                <input type="text" wire:model="socail" name="socail" id="socail"
+                                    class="px-2 py-1 rounded-md shadow-sm">
+                                @error('socail')
+                                    <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
+                                @enderror
+                            </div>
 
-                        <div>
-                            <label for="socail" class="text-base font-Notokhmer">សិក្សាសង្គម</label>
-                            <input type="text" wire:model="socail" name="socail" id="socail"
-                                class="px-2 py-1 rounded-md shadow-sm">
-                            @error('socail')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
                         </div>
-
                     </div>
                 </div>
 

@@ -16,7 +16,7 @@
                 </button>
             </div>
         </div>
-        <div class=" mx-5" id="printMe">
+        <div class="" id="printMe">
             <div class=" text-center text-base font-Notokhmer font-bold">
                 <p>
                     ព្រះជារាណាចក្រកម្ពុជា
