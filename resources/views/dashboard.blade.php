@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="ml-60 px-2">
-        <div class="grid grid-cols-3 gap-1 sm:py-1 text-center">
+        <div class="grid grid-cols-2 gap-1 sm:py-1 text-center">
             <div>
                 <button
-                    class="text-black border border-black focus:outline-none focus:ring-1 focus:ring-black font-Notokhmer text-xl rounded-xl px-24 py-10 text-center mr-2 mb-2 bg-black">
+                    class="text-black border border-gray-600 focus:outline-none focus:ring-1 focus:ring-black font-Notokhmer text-xl rounded-xl w-full px-10 py-10 text-center bg-gray-500">
                     <a href="{{ route('index') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-10 h-10 text-center ml-4 text-white">
@@ -24,7 +24,7 @@
 
             <div>
                 <button
-                    class="py-10 px-24 mr-2 mb-2 text-xl font-Notokhmer text-black focus:outline-non rounded-xl border border-black focus:z-10 focus:ring-1 focus:ring-black bg-blue-500">
+                    class="w-full px-10 py-10 text-xl font-Notokhmer focus:outline-non rounded-xl border border-blue-600 focus:z-10 focus:ring-1 focus:ring-black bg-blue-500">
                     <a href="{{ route('student_index') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-10 h-10 ml-4 text-white">
@@ -45,10 +45,10 @@
 
             <div>
                 <button
-                    class=" px-24 py-10 text-black focus:outline-none focus:ring-1 focus:ring-black font-Notokhmer rounded-xl focus:z-10 text-xl mr-2 mb-2 border border-black bg-green-500">
+                    class=" w-full px-10 py-10 text-black focus:outline-none focus:ring-1 focus:ring-black font-Notokhmer rounded-xl focus:z-10 text-xl border border-green-600 bg-green-500">
                     <a href="{{ route('class_index') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-10 h-10 ml-7 text-white">
+                            stroke="currentColor" class="w-10 h-10 ml-4 text-white">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
                         </svg>
@@ -58,6 +58,27 @@
                             </p>
                             <p>
                                 សរុប {{ $academic_classes }} ថ្នាក់សិក្សា
+                            </p>
+                        </div>
+                    </a>
+                </button>
+            </div>
+
+            <div>
+                <button
+                    class="w-full px-10 py-10 focus:outline-none focus:ring-1 focus:ring-lime-600 font-Notokhmer rounded-xl focus:z-10 text-xl border border-lime-600 bg-lime-500">
+                    <a href="{{ route('home') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-10 h-10 ml-4  text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <div class="text-base font-Notokhmer text-white">
+                            <p>
+                                អ្នកប្រើប្រាស់
+                            </p>
+                            <p>
+                                សរុប {{ $users }} នាក់
                             </p>
                         </div>
                     </a>

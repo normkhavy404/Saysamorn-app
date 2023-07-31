@@ -2,8 +2,7 @@
     <div style="margin-left: 16vw; margin-right: 20px">
         <div class="my-3">
             <div
-                class="inline-flex items-center px-4 py-2 bg-red-800 border border-transparent rounded-md font-Notokhmer text-base text-white uppercase tracking-widest hover:bg-red-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
-
+                class="inline-flex items-center px-4 py-2 bg-red-800 border border-transparent rounded-md font-Notokhmer text-base text-white uppercase tracking-widest hover:bg-red-700  disabled:opacity-25 transition ease-in-out duration-150">
                 <a href="{{ route('attendent_index', $academic_class->id) }}">
                     ចាកចេញ
                 </a>
@@ -11,10 +10,9 @@
         </div>
         <div class="">
             <div class="flex justify-between my-3">
-
                 <div class="flex">
                     <div class="flex items-center">
-                        <label for="text" class="text-base font-Notokhmer">ស្វែងរកអវត្តមានសិស្សប្រចាំ</label>
+                        <label for="text" class="text-base font-Notokhmer px-2">ស្វែងរកអវត្តមានសិស្សប្រចាំ</label>
                     </div>
                     <div>
                         <select wire:model="month" class="rounded-md font-Notokhmer">
@@ -46,7 +44,7 @@
 
             </div>
             <div class="" id="printMe">
-                <div class=" text-center text-base font-Notokhmer font-bold">
+                <div class=" text-center text-base font-muol font-bold">
                     <p>
                         ព្រះជារាណាចក្រកម្ពុជា
                     </p>
@@ -54,7 +52,7 @@
                         ជាតិ សាសនា ព្រះមហាក្សត្រ
                     </p>
                 </div>
-                <div class="ml-10 text-base font-Notokhmer font-bold">
+                <div class="ml-10 text-base font-muol font-bold">
                     <p>
                         កម្រងសាលារោងគោ
                     </p>
@@ -63,7 +61,7 @@
                     </p>
                 </div>
                 <div>
-                    <div class="text-center text-base font-Notokhmer font-bold">
+                    <div class="text-center text-base font-muol font-bold">
                         <p>របាយការណ៍អវត្តមានសិស្សសរុបប្រចាំ{{ $month ? 'ខែ' . filterMonth($month) : 'ឆ្នាំ' }}
                             នៃថ្នាក់ទី​ <td>{{ $academic_class->name_class }}</td>
                         </p>
@@ -111,30 +109,50 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                {{-- {{ $teachers->links() }} --}}
+                            </div>
+                            <div class=" flex justify-between">
+                                <div class="px-16 my-4">
+                                    <p class="text-lg text-black font-Notokhmer">
+                                        បានឃើញ និង​​ ឯកភាព
+                                    </p>
+                                    <p class="text-lg font-bold text-black font-muol px-3 py-4">
+                                        នាយិកាសាលា
+                                    </p>
+                                </div>
+                                <div class="py-5">
+                                    <p class="text-lg text-black font-Notokhmer mr-10 ">
+                                        ថ្ងៃ​.....................ខែ..........ឆ្នាំ...................ព.ស ២៥៦.....
+                                    </p>
+                                    <p class="text-lg text-black font-Notokhmer px-8 py-4">
+                                        សាយសាម៉ន ថ្ងៃទី.........ខែ.............ឆ្នាំ ២០២.......
+                                    </p>
+                                    <p class="text-lg font-bold text-black font-muol text-center py-5">
+                                        គ្រូបន្ទុកថ្នាក់
+                                    </p>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    @push('scripts')
-        <script>
-            function printDiv(divName) {
-                let printContents = document.getElementById(divName).innerHTML;
-                let originalContents = document.body.innerHTML;
+        @push('scripts')
+            <script>
+                function printDiv(divName) {
+                    let printContents = document.getElementById(divName).innerHTML;
+                    let originalContents = document.body.innerHTML;
 
-                document.body.innerHTML = printContents;
+                    document.body.innerHTML = printContents;
 
-                window.print();
+                    window.print();
 
-                document.body.innerHTML = originalContents;
+                    document.body.innerHTML = originalContents;
 
-            }
-            window.onafterprint = function() {
-                window.location.reload(true);
-            };
-        </script>
-    @endpush
+                }
+                window.onafterprint = function() {
+                    window.location.reload(true);
+                };
+            </script>
+        @endpush

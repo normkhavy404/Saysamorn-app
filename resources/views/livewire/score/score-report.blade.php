@@ -14,10 +14,41 @@
             <div class="mx-2">
                 <button class="text-white px-6 py-3 border rounded-md font-Notokhmer bg-blue-500 hover:bg-blue-400"
                     onclick="printDiv('printMe')">
-
                     បោះពុម្ភ
                 </button>
             </div>
+        </div>
+        <div class="flex">
+            <div class="flex items-center">
+                <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+            </div>
+            <div>
+                <select wire:model="month" class="rounded-md font-Notokhmer">
+                    <option selected>ប្រចាំខែ</option>
+                    <option value="1">មករា</option>
+                    <option value="2">កុម្ភៈ</option>
+                    <option value="3">មិនា</option>
+                    <option value="4">មេសា</option>
+                    <option value="5">ឧសភា</option>
+                    <option value="6">មិថុនា</option>
+                    <option value="7">កក្កដា</option>
+                    <option value="8">សីហា</option>
+                    <option value="9">កញ្ញា</option>
+                    <option value="10">តុលា</option>
+                    <option value="11">វិច្ឆកា</option>
+                    <option value="12">ធ្នូ</option>
+                </select>
+            </div>
+            <div>
+
+                <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+                <select wire:model="semester" class="rounded-md text-base font-Notokhmer">
+                    <option selected>ប្រចាំឆមាស</option>
+                    <option value="">ឆមាស ១</option>
+                    <option value="">ឆមាស ២</option>
+                </select>
+            </div>
+
         </div>
         <div id="printMe">
             <div class=" text-center text-lg font-muol font-bold">
@@ -28,9 +59,8 @@
                     ជាតិ សាសនា ព្រះមហាក្សត្រ
                 </p>
             </div>
-            <div class="ml-10 py-2 text-lg font-muol font-bold">
-                <p>ការិយាល័យអប់រំ យុវជន​ និងកីឡាស្រុកមង្គលបូរី </p>
-                <p class="">
+            <div class="ml-10 py-2 text-base font-muol font-bold">
+                <p>
                     កម្រងសាលារោងគោ
                 </p>
                 <p>
@@ -39,10 +69,13 @@
             </div>
             <div class="text-center text-lg font-muol font-bold">
                 <p>
-                    បញ្ជីឈ្មោះគ្រូបង្រៀនមូលដ្ឋាន
+                    ចំណាត់ថ្នាក់សិស្សប្រចាំ
                 </p>
                 <p>
-                    ក្នុងឆ្នាំសិក្សា ២០២៣​ - ២០២៤
+                    ថ្នាក់ទី <td>{{ $academic_class->name_class }}</td>
+                </p>
+                <p>
+                    ក្នុងឆ្នាំសិក្សា <td>{{ $academic_class->academic_year_name }}</td>
                 </p>
             </div>
             <div class="flex flex-col">
@@ -86,14 +119,14 @@
                                 </tr>
                             </thead>
                             <tbody class="bg-white divide-y divide-gray-200 text-black">
-                                @foreach ($score as $sco)
+                                @foreach ($studies as $sco)
                                     <tr>
                                         <td scope="col" class="px-6 py-3 text-base text-center border border-black">
-                                            {{ $sco->id }}
+                                            {{ $loop->index + 1 }}
                                         </td>
                                         <td scope="col"
                                             class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
-                                            {{ $sco->first_name }} {{ $sco->last_name }}
+                                            {{ $sco->name }}
                                         </td>
                                         <td scope="col"
                                             class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
@@ -103,17 +136,42 @@
                                                 ស្រី
                                             @endif
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-black text-center border border-black">
+                                        <td scope="col"
+                                            class="px-6 py-3 text-center border border-black text-blue-600">
                                             {{ $sco->khmer + $sco->math + $sco->science + $sco->socail }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-base border border-black">
+                                        <td scope="col"
+                                            class="px-6 py-3 text-base border border-black text-blue-600">
                                             {{ ($sco->khmer + $sco->math + $sco->science + $sco->socail) / 4 }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-base border border-black">
+                                        <td scope="col"
+                                            class="px-6 py-3 text-base border border-black text-red-600 font-bold">
 
+                                            {{ $sco->rank }}
                                         </td>
-                                        <td scope="col" class="px-6 py-3 text-base border border-black">
-
+                                        <td scope="col"
+                                            class="px-6 py-3 text-base font-Notokhmer text-red-600 font-bold border border-black">
+                                            @if ($sco->rank == 1)
+                                                ល្អណាស់
+                                            @elseif ($sco->rank == 2)
+                                                ល្អណាស់
+                                            @elseif ($sco->rank == 3)
+                                                ល្អណាស់
+                                            @elseif ($sco->rank == 4)
+                                                ល្អ
+                                            @elseif ($sco->rank == 5)
+                                                ល្អ
+                                            @elseif ($sco->rank == 6)
+                                                ល្អ
+                                            @elseif ($sco->rank == 7)
+                                                ល្អ
+                                            @elseif ($sco->rank == 8)
+                                                ល្អ
+                                            @elseif ($sco->rank == 9)
+                                                ល្អ
+                                            @elseif ($sco->rank == 10)
+                                                ល្អ
+                                            @endif
                                         </td>
                                         <td scope="col" class="px-6 py-3 text-base border border-black">
 
@@ -140,11 +198,8 @@
                             <p class="text-lg font-Notokhmer ml-16">
                                 សាយសាម៉ន ថ្ងៃទី.........ខែ...............ឆ្នាំ ២០២.....
                             </p>
-                            <p class="text-lg font-muol  ml-48 py-2">
-                                អ្នកធ្វើតារាង
-                            </p>
-                            <p class="text-lg font-muol ml-64">
-                                ជា ឡិនជី
+                            <p class="text-lg my-10 font-muol ml-64">
+                                គ្រូបន្ទុកថ្នាក់
                             </p>
                         </div>
                     </div>
@@ -152,22 +207,21 @@
             </div>
         </div>
     </div>
-</div>
-@push('scripts')
-    <script>
-        function printDiv(divName) {
-            let printContents = document.getElementById(divName).innerHTML;
-            let originalContents = document.body.innerHTML;
+    @push('scripts')
+        <script>
+            function printDiv(divName) {
+                let printContents = document.getElementById(divName).innerHTML;
+                let originalContents = document.body.innerHTML;
 
-            document.body.innerHTML = printContents;
+                document.body.innerHTML = printContents;
 
-            window.print();
+                window.print();
 
-            document.body.innerHTML = originalContents;
+                document.body.innerHTML = originalContents;
 
-        }
-        window.onafterprint = function() {
-            window.location.reload(true);
-        };
-    </script>
+            }
+            window.onafterprint = function() {
+                window.location.reload(true);
+            };
+        </script>
     </div>

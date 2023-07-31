@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class ScoreCreate extends Component
 {
-    public $academic_class, $academic_class_student_id , $semester , $type ,$khmer ,$math, $science , $socail;
+    public $academic_class, $academic_class_student_id , $semester , $type ,$khmer ,$math, $science , $socail, $types;
 
     protected $rules =[
         'academic_class_student_id' => 'required',
@@ -35,6 +35,7 @@ class ScoreCreate extends Component
     }
     public function render()
     {
+
         $students = DB::table('academic_class_student')
         ->join('students', 'students.id', 'academic_class_student.student_id')
         ->select('academic_class_student.id', 'students.first_name', 'students.last_name')
@@ -57,7 +58,9 @@ class ScoreCreate extends Component
         $score->math = $this->math;
         $score->science = $this->science;
         $score->socail = $this->socail;
-        $score->save();
+        if($score->save()){
+            return to_route('score_index',$this->academic_class->id);
+        }
 
     }
 }

@@ -14,15 +14,54 @@
             </a>
             <div>
                 <a href="{{ route('score_create', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-blue-800 font-Notokhmer text-base text-white hover:bg-blue-700">
+                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
                     បញ្ចូលពិន្ទុ
                 </a>
+                |
                 <a href="{{ route('score_report', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-green-800 font-Notokhmer text-base text-white hover:bg-green-700">
+                    class="px-8 py-3 border rounded-md bg-green-600 font-Notokhmer text-base text-white hover:bg-green-500">
                     របាយការណ៍ពិន្ទុ
                 </a>
             </div>
         </div>
+        {{-- <div>
+            <div class="flex justify-start">
+                <div class="flex ">
+                    <div class="flex items-center">
+                        <label for="text" class="text-lg font-Notokhmer">ប្រចាំខែ</label>
+                    </div>
+                    <div>
+                        <select wire:model="month" class="rounded-md font-Notokhmer">
+                            <option value="0">ប្រចាំឆ្នាំ</option>
+                            <option value="1">មករា</option>
+                            <option value="2">កុម្ភៈ</option>
+                            <option value="3">មិនា</option>
+                            <option value="4">មេសា</option>
+                            <option value="5">ឧសភា</option>
+                            <option value="6">មិថុនា</option>
+                            <option value="7">កក្កដា</option>
+                            <option value="8">សីហា</option>
+                            <option value="9">កញ្ញា</option>
+                            <option value="10">តុលា</option>
+                            <option value="11">វិច្ឆកា</option>
+                            <option value="12">ធ្នូ</option>
+                        </select>
+                    </div>
+                    <div class="flex ml-2">
+                        <div class="flex items-center">
+                            <label for="text" class="text-lg font-Notokhmer">ប្រចាំឆមាស</label>
+                        </div>
+                        <div>
+                            <select name="text" class=" rounded-md font-Notokhmer">
+                                <option value="">ជ្រើសរើស ឆមាស</option>
+                                <option value="1">ឆមាស l</option>
+                                <option value="2">ឆមាស ll</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
         <div class="flex flex-col">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
                 <div class="shadow-lg overflow-hidden border sm:rounded-md">
@@ -59,12 +98,6 @@
                                 <td scope="col" class="px-6 py-3 border border-black font-Notokhmer font-bold ">
                                     សរុប
                                 </td>
-                                {{-- <td scope="col" class="px-6 py-3 border border-black  font-bold">
-                                    មធ្យមភាគ
-                                </td>
-                                <th scope="col" class="px-6 py-3 border border-black">
-                                    និទេ្ទស
-                                </th> --}}
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     សកម្មភាព
                                 </th>
@@ -140,17 +173,9 @@
                                         {{ $scor->socail }}
                                     </td>
                                     <td scope="col"
-                                        class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
+                                        class="px-6 py-3 font-Notokhmer text-base text-red-600 font-bold border border-black">
                                         {{ $scor->khmer + $scor->math + $scor->science + $scor->socail }}
                                     </td>
-                                    {{-- <td scope="col"
-                                        class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
-                                        {{ ($scor->khmer + $scor->math + $scor->science + $scor->socail) / 4 }}
-                                    </td>
-                                    <td scope="col"
-                                        class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
-
-                                    </td> --}}
                                     <td scope="col" class="px-6 py-3 border border-black">
                                         <div class=" flex px-6 py-3 justify-center">
                                             <a href="{{ route('score_edit', $academic_class->id) }}">

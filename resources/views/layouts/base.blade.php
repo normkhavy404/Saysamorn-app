@@ -12,7 +12,7 @@
     <title class="text-base font-muol">សាលាបឋមសិក្សា សាយសាម៉ន</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
+    <link rel="shortcut icon" href="/storage/images/thsis.png">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">

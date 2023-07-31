@@ -13,6 +13,7 @@ class ScoreIndex extends Component
     use LivewireAlert;
     public $academic_class;
     public $delete_score;
+
     public function getListeners()
     {
     return [
@@ -33,6 +34,7 @@ class ScoreIndex extends Component
         ->select('scores.id','students.first_name','students.last_name','students.gender','semester','type','khmer','math','science','socail')
         ->where('academic_class_student.academic_class_id', $this->academic_class->id)
         ->get();
+
         // dd($score->all());
         return view('livewire.score.score-index', compact('students','score'));
     }

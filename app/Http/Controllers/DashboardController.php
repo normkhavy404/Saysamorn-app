@@ -13,6 +13,7 @@ class DashboardController extends Controller
         $student = DB::table('students')->count();
         $teacher = DB::table('teachers')->count();
         $academic_classes = DB::table('academic_classes')->count();
-        return view('dashboard', compact('student','teacher','academic_classes'));
+        $users = DB::table('users')->count();
+        return view('dashboard', compact('student','teacher','academic_classes','users'));
     }
 }

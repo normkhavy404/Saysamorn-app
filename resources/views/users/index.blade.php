@@ -83,15 +83,18 @@
                                                 {{-- <a href="{{ route('users.show', $user->id) }}">
                                                     show
                                                 </a> --}}
-                                                <a href="{{ route('users.edit', $user->id) }}" class="text-blue-500">
-                                                    Edit
+                                                <a href="{{ route('users.edit', $user->id) }}"
+                                                    class="text-blue-600 text-base font-Notokhmers">
+                                                    កែប្រែ
                                                 </a>
+                                                |
                                                 <form class="inline-block" action="{{ route('users.destroy', $user->id) }}"
                                                     method="POST" onsubmit="return confirm('Are you sure?');">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2"
-                                                        value="Delete">
+                                                    <input type="submit"
+                                                        class="text-red-600 text-base font-Notokhmer hover:text-red-900 mb-2 mr-2"
+                                                        value="លុប">
                                                 </form>
                                             </td>
                                         </tr>
