@@ -37,6 +37,7 @@ use App\Http\Livewire\Score\ScoreCreate;
 use App\Http\Livewire\Score\ScoreEdit;
 use App\Http\Livewire\Score\ScoreIndex;
 use App\Http\Livewire\Score\ScoreReport;
+use App\Http\Livewire\Score\ScoreReports;
 use App\Http\Livewire\Score\ScoreShow;
 
 use App\Http\Livewire\Students\StudentCreate;
@@ -133,7 +134,7 @@ Route::middleware('auth')->group(function () {
     Route::get('score/create/{id}', ScoreCreate::class)->name('score_create');
     Route::get('score/edit/{id}', ScoreEdit::class)->name('score_edit');
     Route::get('score/show/{id}', ScoreShow::class)->name('score_show');
-    Route::get('score/report/{id}', ScoreReport::class)->name('score_report');
+    Route::get('score/report/{id}', ScoreReports::class)->name('score_report');
 
     //Attendent
 

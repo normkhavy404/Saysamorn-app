@@ -12,13 +12,26 @@
                 </a>
             </div>
             <div class="mx-2">
+                @if($month || $semester)
                 <button class="text-white px-6 py-3 border rounded-md font-Notokhmer bg-blue-500 hover:bg-blue-400"
                     onclick="printDiv('printMe')">
                     បោះពុម្ភ
                 </button>
+                @endif
             </div>
         </div>
         <div class="flex">
+            <div class="flex items-center">
+                <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+            </div>
+            <div>
+                <select wire:model.lazy="type" class="rounded-md font-Notokhmer">
+                    <option selected>ជ្រើសរើសប្រភេទ</option>
+                    <option value="1">ប្រលងប្រចាំខែ</option>
+                    <option value="2">ប្រលងឆមាស</option>
+                </select>
+            </div>
+            @if($type == 1)
             <div class="flex items-center">
                 <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
             </div>
@@ -39,17 +52,21 @@
                     <option value="12">ធ្នូ</option>
                 </select>
             </div>
-            <div>
+             @elseif ($type == 2)
+             <div>
 
                 <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
                 <select wire:model="semester" class="rounded-md text-base font-Notokhmer">
                     <option selected>ប្រចាំឆមាស</option>
-                    <option value="">ឆមាស ១</option>
-                    <option value="">ឆមាស ២</option>
+                    <option value="1">ឆមាស ១</option>
+                    <option value="2">ឆមាស ២</option>
                 </select>
             </div>
+            @endif
+
 
         </div>
+        @if($month || $semester)
         <div id="printMe">
             <div class=" text-center text-lg font-muol font-bold">
                 <p>
@@ -206,22 +223,24 @@
                 </div>
             </div>
         </div>
+        @endif
+    </div>
     </div>
     @push('scripts')
-        <script>
-            function printDiv(divName) {
-                let printContents = document.getElementById(divName).innerHTML;
-                let originalContents = document.body.innerHTML;
+    <script>
+        function printDiv(divName) {
+            let printContents = document.getElementById(divName).innerHTML;
+            let originalContents = document.body.innerHTML;
 
-                document.body.innerHTML = printContents;
+            document.body.innerHTML = printContents;
 
-                window.print();
+            window.print();
 
-                document.body.innerHTML = originalContents;
+            document.body.innerHTML = originalContents;
 
-            }
-            window.onafterprint = function() {
-                window.location.reload(true);
-            };
-        </script>
-    </div>
+        }
+        window.onafterprint = function() {
+            window.location.reload(true);
+        };
+    </script>
+@endpush

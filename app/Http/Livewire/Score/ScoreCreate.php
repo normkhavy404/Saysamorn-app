@@ -14,7 +14,7 @@ class ScoreCreate extends Component
     protected $rules =[
         'academic_class_student_id' => 'required',
         'semester'                  => 'required',
-        'type'                      => 'required',
+        'type'                      => 'nullable',
         'khmer'                     => 'required',
         'math'                      => 'required',
         'science'                   => 'required',
@@ -53,7 +53,7 @@ class ScoreCreate extends Component
         $score = new Score();
         $score->academic_class_student_id = $this->academic_class_student_id;
         $score->semester = $this->semester;
-        $score->type = $this->type;
+        $score->type = $this->type ?? 0;
         $score->khmer = $this->khmer;
         $score->math = $this->math;
         $score->science = $this->science;
