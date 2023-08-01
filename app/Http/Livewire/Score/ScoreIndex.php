@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 class ScoreIndex extends Component
 {
     use LivewireAlert;
-    public $academic_class;
+    public $academic_class ,$month , $semester, $type;
     public $delete_score;
 
     public function getListeners()
@@ -20,6 +20,13 @@ class ScoreIndex extends Component
     	'confirmed'
     ];
    }
+
+
+   public function updatedType(){
+    $this->semester = null;
+    $this->month = null;
+ }
+
     public function render()
     {
         // $score = $this->total_score::avg();
@@ -31,6 +38,13 @@ class ScoreIndex extends Component
         $score = DB::table('scores')
         ->join('academic_class_student','academic_class_student.id','scores.academic_class_student_id')
         ->join('students','students.id','academic_class_student.student_id')
+        ->when($this->month ?? null, function ($q) {
+            return $q
+                ->where('scores.type', $this->month);
+        })->when($this->semester ?? null, function ($q) {
+            return $q
+                ->where('scores.type', 0)->where('scores.semester', $this->semester);
+        })
         ->select('scores.id','students.first_name','students.last_name','students.gender','semester','type','khmer','math','science','socail')
         ->where('academic_class_student.academic_class_id', $this->academic_class->id)
         ->get();

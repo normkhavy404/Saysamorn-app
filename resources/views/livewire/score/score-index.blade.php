@@ -12,27 +12,24 @@
                 class="px-8 py-3 border rounded-md text-white font-Notokhmer bg-red-800 text-base hover:bg-red-700">
                 ចាកចេញ
             </a>
-            <div>
-                <a href="{{ route('score_create', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
-                    បញ្ចូលពិន្ទុ
-                </a>
-                |
-                <a href="{{ route('score_report', $academic_class->id) }}"
-                    class="px-8 py-3 border rounded-md bg-green-600 font-Notokhmer text-base text-white hover:bg-green-500">
-                    របាយការណ៍ពិន្ទុ
-                </a>
-            </div>
-        </div>
-        {{-- <div>
-            <div class="flex justify-start">
-                <div class="flex ">
+            <div class="flex">
+                <div class="flex items-center">
+                    <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+                </div>
+                <div>
+                    <select wire:model.lazy="type" class="rounded-md font-Notokhmer">
+                        <option selected>ជ្រើសរើសប្រភេទ</option>
+                        <option value="1">ប្រលងប្រចាំខែ</option>
+                        <option value="2">ប្រលងឆមាស</option>
+                    </select>
+                </div>
+                @if ($type == 1)
                     <div class="flex items-center">
-                        <label for="text" class="text-lg font-Notokhmer">ប្រចាំខែ</label>
+                        <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
                     </div>
                     <div>
                         <select wire:model="month" class="rounded-md font-Notokhmer">
-                            <option value="0">ប្រចាំឆ្នាំ</option>
+                            <option selected>ប្រចាំខែ</option>
                             <option value="1">មករា</option>
                             <option value="2">កុម្ភៈ</option>
                             <option value="3">មិនា</option>
@@ -47,21 +44,32 @@
                             <option value="12">ធ្នូ</option>
                         </select>
                     </div>
-                    <div class="flex ml-2">
-                        <div class="flex items-center">
-                            <label for="text" class="text-lg font-Notokhmer">ប្រចាំឆមាស</label>
-                        </div>
-                        <div>
-                            <select name="text" class=" rounded-md font-Notokhmer">
-                                <option value="">ជ្រើសរើស ឆមាស</option>
-                                <option value="1">ឆមាស l</option>
-                                <option value="2">ឆមាស ll</option>
-                            </select>
-                        </div>
+                @elseif ($type == 2)
+                    <div>
+
+                        <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+                        <select wire:model="semester" class="rounded-md text-base font-Notokhmer">
+                            <option selected>ប្រចាំឆមាស</option>
+                            <option value="1">ឆមាស ១</option>
+                            <option value="2">ឆមាស ២</option>
+                        </select>
                     </div>
-                </div>
+                @endif
+
+
             </div>
-        </div> --}}
+            <div>
+                <a href="{{ route('score_create', $academic_class->id) }}"
+                    class="px-8 py-3 border rounded-md bg-blue-600 font-Notokhmer text-base text-white hover:bg-blue-500">
+                    បញ្ចូលពិន្ទុ
+                </a>
+                |
+                <a href="{{ route('score_report', $academic_class->id) }}"
+                    class="px-8 py-3 border rounded-md bg-green-600 font-Notokhmer text-base text-white hover:bg-green-500">
+                    របាយការណ៍ពិន្ទុ
+                </a>
+            </div>
+        </div>
         <div class="flex flex-col">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
                 <div class="shadow-lg overflow-hidden border sm:rounded-md">
@@ -178,7 +186,7 @@
                                     </td>
                                     <td scope="col" class="px-6 py-3 border border-black">
                                         <div class=" flex px-6 py-3 justify-center">
-                                            <a href="{{ route('score_edit', $academic_class->id) }}">
+                                            <a href="{{ route('score_edit', [$scor->id]) }}">
                                                 <svg class="h-5 w-5 text-green-500" viewBox="0 0 24 24" stroke-width="2"
                                                     stroke="currentColor" fill="none" stroke-linecap="round"
                                                     stroke-linejoin="round">
@@ -186,7 +194,8 @@
                                                     <path
                                                         d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
                                                     <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                                                    <line x1="16" y1="5" x2="19" y2="8" />
+                                                    <line x1="16" y1="5" x2="19"
+                                                        y2="8" />
                                                 </svg>
                                             </a>
                                             <a wire:click="AttDelete ({{ $academic_class->id }})">
@@ -194,8 +203,10 @@
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                     <path stroke="none" d="M0 0h24v24H0z" />
-                                                    <line x1="4" y1="7" x2="20" y2="7" />
-                                                    <line x1="10" y1="11" x2="10" y2="17" />
+                                                    <line x1="4" y1="7" x2="20"
+                                                        y2="7" />
+                                                    <line x1="10" y1="11" x2="10"
+                                                        y2="17" />
                                                     <line x1="14" y1="11" x2="14"
                                                         y2="17" />
                                                     <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
