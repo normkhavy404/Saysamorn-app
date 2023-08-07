@@ -22,6 +22,7 @@ class ScoreReports extends Component
     {
 
     $academic_class = DB::table('academic_classes')->get();
+    $academic_year = DB::table('academic_years')->get();
     $studies = Score::where('academic_class_id', $this->academic_class->id)
     ->join('academic_class_student','academic_class_student.id','scores.academic_class_student_id')
     ->join('students', 'students.id', 'academic_class_student.student_id')
@@ -35,11 +36,13 @@ class ScoreReports extends Component
     })
     // ->select('scores.id','students.first_name','students.last_name','students.gender','semester','type','khmer' ,'math','science','socail','students.id as student_id',DB::raw("MONTH(studies.date) month"))
     ->where('academic_class_student.academic_class_id', $this->academic_class->id)
+
     ->get();
     $students = academic_class_student::where('academic_class_id', $this->academic_class->id)
         ->join('students', 'academic_class_student.student_id', 'students.id')
         ->select(DB::raw("CONCAT(students.first_name, ' ', students.last_name) as name"), 'students.gender', 'students.id')
         ->where('academic_class_id', $this->academic_class->id)
+        // ->OrderBy('rank')
         ->get();
         $data = [];
         if(count($studies) != 0) {

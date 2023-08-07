@@ -14,17 +14,9 @@
                         <label for="status" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
                             ឈ្មោះសិស្ស
                         </label>
-                        <select id="academic_class_student_id" wire:model="academic_class_student_id"
+                        <input type="text" name="student_name" wire:model="student_name" readonly
                             class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option selected>ជ្រើសរើស​ សិស្ស</option>
-                            @foreach ($students as $stu)
-                                <option value="{{ $stu->id }}">{{ $stu->first_name }} {{ $stu->last_name }}
-                                </option>
-                            @endforeach
-                        </select>
-                        @error('academic_class_student_id')
-                            <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                        @enderror
+
                     </div>
                     <div class="px-4 sm:p-3">
                         <label for="status" class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
@@ -55,7 +47,7 @@
                         </a>
                     </div>
                     |
-                    <button wire:click="CreateAtt"
+                    <button wire:click="UpdateAtt"
                         class="inline-flex items-center px-4 py-2 bg-blue-800 border border-transparent rounded-md font-Notokhmer text-base text-white uppercase tracking-widest hover:bg-blue-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">

@@ -25,7 +25,7 @@
                 </div>
                 @if ($type == 1)
                     <div class="flex items-center">
-                        <label for="text" class="text-base font-Notokhmer px-2">របាយការណ៍ពិន្ទុ</label>
+                        <label for="text" class="text-base font-Notokhmer px-2">ប្រចាំ</label>
                     </div>
                     <div>
                         <select wire:model="month" class="rounded-md font-Notokhmer">
@@ -85,12 +85,12 @@
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     ភេទ
                                 </th>
-                                <th scope="col" class="px-6 py-3 border border-black">
+                                {{-- <th scope="col" class="px-6 py-3 border border-black">
                                     ឆមាស
                                 </th>
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     ខែ
-                                </th>
+                                </th> --}}
                                 <th scope="col" class="px-6 py-3 border border-black">
                                     ភាសាខ្មែរ
                                 </th>
@@ -129,7 +129,7 @@
                                             ស
                                         @endif
                                     </td>
-                                    <td scope="col" class="px-6 py-3 border border-black font-Notokhmer">
+                                    {{-- <td scope="col" class="px-6 py-3 border border-black font-Notokhmer">
                                         @if ($scor->semester == 1)
                                             1
                                         @else
@@ -163,7 +163,7 @@
                                         @else
                                             ធ្នូ
                                         @endif
-                                    </td>
+                                    </td> --}}
                                     <td scope="col"
                                         class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
                                         {{ $scor->khmer }}
@@ -194,11 +194,10 @@
                                                     <path
                                                         d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
                                                     <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                                                    <line x1="16" y1="5" x2="19"
-                                                        y2="8" />
+                                                    <line x1="16" y1="5" x2="19" y2="8" />
                                                 </svg>
                                             </a>
-                                            <a wire:click="AttDelete ({{ $academic_class->id }})">
+                                            <a wire:click="AttDelete ({{ $scor->id }})">
                                                 <svg class="h-5 w-5 text-red-500" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                     fill="none" stroke-linecap="round" stroke-linejoin="round">

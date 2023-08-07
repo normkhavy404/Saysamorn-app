@@ -11,52 +11,56 @@ use Illuminate\Support\Facades\DB;
 class ScoreIndex extends Component
 {
     use LivewireAlert;
-    public $academic_class ,$month , $semester, $type;
+    public $academic_class, $month, $semester, $type;
     public $delete_score;
 
     public function getListeners()
     {
-    return [
-    	'confirmed'
-    ];
-   }
+        return [
+            'confirmed'
+        ];
+    }
 
 
-   public function updatedType(){
-    $this->semester = null;
-    $this->month = null;
- }
+    public function updatedType()
+    {
+        $this->semester = null;
+        $this->month = null;
+    }
 
     public function render()
     {
         // $score = $this->total_score::avg();
         // dd($this->total_score);
         $students = DB::table('academic_class_student')
-        ->join('students', 'students.id', 'academic_class_student.student_id')
-        ->select('academic_class_student.id', 'students.first_name', 'students.last_name')->get();
+            ->join('students', 'students.id', 'academic_class_student.student_id')
+            ->select('academic_class_student.id', 'students.first_name', 'students.last_name')->get();
 
         $score = DB::table('scores')
-        ->join('academic_class_student','academic_class_student.id','scores.academic_class_student_id')
-        ->join('students','students.id','academic_class_student.student_id')
-        ->when($this->month ?? null, function ($q) {
-            return $q
-                ->where('scores.type', $this->month);
-        })->when($this->semester ?? null, function ($q) {
-            return $q
-                ->where('scores.type', 0)->where('scores.semester', $this->semester);
-        })
-        ->select('scores.id','students.first_name','students.last_name','students.gender','semester','type','khmer','math','science','socail')
-        ->where('academic_class_student.academic_class_id', $this->academic_class->id)
-        ->get();
+            ->join('academic_class_student', 'academic_class_student.id', 'scores.academic_class_student_id')
+            ->join('students', 'students.id', 'academic_class_student.student_id')
+            ->when($this->month ?? null, function ($q) {
+                return $q
+                    ->where('scores.type', $this->month);
+            })->when($this->semester ?? null, function ($q) {
+                return $q
+                    ->where('scores.type', 0)->where('scores.semester', $this->semester);
+            })
+            ->select('scores.id', 'students.first_name', 'students.last_name', 'students.gender', 'semester', 'type', 'khmer', 'math', 'science', 'socail')
+            ->where('academic_class_student.academic_class_id', $this->academic_class->id)
+            ->get();
 
         // dd($score->all());
-        return view('livewire.score.score-index', compact('students','score'));
+        return view('livewire.score.score-index', compact('students', 'score'));
     }
-    public function mount($id){
-        $this->academic_class = Academic_class::join('academic_years','academic_years.id','academic_classes.academic_year_id')
-        ->select('academic_classes.id','academic_classes.name_class','academic_years.name_year as academic_year_name')->find($id);
+    public function mount($id)
+    {
+        $this->academic_class = Academic_class::join('academic_years', 'academic_years.id', 'academic_classes.academic_year_id')
+            ->select('academic_classes.id', 'academic_classes.name_class', 'academic_years.name_year as academic_year_name')->find($id);
     }
-    public function AttDelete($id){
+    public function AttDelete($id)
+    {
+        // dd('Hello');
         $this->delete_score = $id;
         $this->alert('warning', '', [
             'position' => 'center',
@@ -69,7 +73,7 @@ class ScoreIndex extends Component
             'onDismissed' => '',
             'confirmButtonText' => 'លុប',
             'cancelButtonText' => 'ទេ',
-           ]);
+        ]);
     }
     public function confirmed()
     {
@@ -79,6 +83,6 @@ class ScoreIndex extends Component
             'position' => 'center',
             'timer' => 3000,
             'toast' => true,
-           ]);
+        ]);
     }
 }

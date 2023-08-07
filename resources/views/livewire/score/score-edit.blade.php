@@ -2,7 +2,7 @@
     <div class="ml-60 mx-2">
         <div class="block w-full p-3 border border-gray-200 rounded shadow">
             <p class=" text-base font-semibold font-Notokhmer">
-                ឆ្នាំសិក្សា
+                ពិន្ទុ
             </p>
             <p class=" text-base text-blue-500  font-Notokhmer">ចូលកែប្រែព័ត៌មានខាងក្រោម</p>
         </div>
@@ -10,96 +10,96 @@
             <div class="max-w-4xl mx-auto py-5 sm:px-6 lg:px-8">
                 <div class="mt-5 md:mt-0 md:col-span-2">
                     <div class="shadow-lg overflow-hidden sm:rounded-md">
-                        <div class="px-4 sm:p-3">
-                            <label for="status"
-                                class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
-                                ឈ្មោះសិស្ស
-                            </label>
-                            <input type="text" name="student_name" wire:model="student_name" readonly
-                                class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            {{-- <select id="academic_class_student_id" wire:model="student_id"
-                                class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>ជ្រើសរើស​ សិស្ស</option>
-                                @foreach ($students as $stu)
-                                    <option value="{{ $stu->id }}">{{ $stu->first_name }} {{ $stu->last_name }}
-                                    </option>
-                                @endforeach
-                            </select>
-                            @error('student_id')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror --}}
-                        </div>
-                        <div class="px-4 sm:p-3">
-                            <label for="status"
-                                class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
-                                ឆមាស
-                            </label>
-                            <select id="teacher_id" wire:model="semester"
-                                class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>ជ្រើសរើស​ ឆមាស</option>
-                                <option value="1">
-                                    ឆមាស 1
-                                </option>
-                                <option value="2">
-                                    ឆមាស​ 2
-                                </option>
-                            </select>
-                            @error('semester')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
-                        </div>
-                        <div class="px-4 sm:p-3">
-                            <label for="status"
-                                class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
-                                ប្រចាំខែ
-                            </label>
-                            <select id="teacher_id" wire:model="type"
-                                class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>ជ្រើសរើស​ ខែ</option>
-                                <option value="0">
+                        <div class=" flex justify-center">
+                            <div class="px-4 sm:p-3">
+                                <label for="status"
+                                    class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
+                                    ឈ្មោះសិស្ស
+                                </label>
+                                <input type="text" name="student_name" wire:model="student_name" readonly
+                                    class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+
+                            </div>
+                            <div class="px-4 sm:p-3">
+                                <label for="text"
+                                    class="block mb-2 text-base font-Notokhmer text-black dark:text-black">ប្រឡង</label>
+                                <select wire:model="types"
+                                    class="border border-gray-300 text-black text-base rounded-lg font-Notokhmer dark:border-gray-600">
+                                    <option selected>ជ្រើសរើស ប្រភេទ</option>
+
+                                    <option value="1">ប្រចាំ ឆមាស</option>
+                                    <option value="2">ប្រចាំ ខែ</option>
+
+                                </select>
+                            </div>
+                            <div class=" px-4 sm:p-3">
+                                <label for="status"
+                                    class="block mb-2 text-base font-Notokhmer text-gray-900 dark:text-black">
                                     ឆមាស
-                                </option>
-                                <option value="1">
-                                    មករា
-                                </option>
-                                <option value="2">
-                                    កុម្ភៈ
-                                </option>
-                                <option value="3">
-                                    មីនា
-                                </option>
-                                <option value="4">
-                                    មេសា
-                                </option>
-                                <option value="5">
-                                    ឧសភា
-                                </option>
-                                <option value="6">
-                                    មិថុនា
-                                </option>
-                                <option value="7">
-                                    កក្កដា
-                                </option>
-                                <option value="8">
-                                    សីហា
-                                </option>
-                                <option value="9">
-                                    កញ្ញា
-                                </option>
-                                <option value="10">
-                                    តុលា
-                                </option>
-                                <option value="11">
-                                    វិច្ឆិកា
-                                </option>
-                                <option value="12">
-                                    ឆ្នូ
-                                </option>
-                            </select>
-                            @error('type')
-                                <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
-                            @enderror
+                                </label>
+                                <select wire:model="semester"
+                                    class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                    <option selected>ជ្រើសរើស​ ឆមាស</option>
+                                    <option value="1">
+                                        ឆមាស ១
+                                    </option>
+                                    <option value="2">
+                                        ឆមាស​ ២
+                                    </option>
+                                </select>
+                            </div>
                         </div>
+                        <div class="flex justify-center col-6 ml-20">
+                            @if ($this->types == 2)
+                                <div>
+                                    <select id="type" wire:model="type" disabled
+                                        class="border border-gray-300 text-gray-900 text-base font-Notokhmer rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                        <option selected>ជ្រើសរើស​ ខែ</option>
+
+                                        <option value="1">
+                                            មករា
+                                        </option>
+                                        <option value="2">
+                                            កុម្ភៈ
+                                        </option>
+                                        <option value="3">
+                                            មីនា
+                                        </option>
+                                        <option value="4">
+                                            មេសា
+                                        </option>
+                                        <option value="5">
+                                            ឧសភា
+                                        </option>
+                                        <option value="6">
+                                            មិថុនា
+                                        </option>
+                                        <option value="7">
+                                            កក្កដា
+                                        </option>
+                                        <option value="8">
+                                            សីហា
+                                        </option>
+                                        <option value="9">
+                                            កញ្ញា
+                                        </option>
+                                        <option value="10">
+                                            តុលា
+                                        </option>
+                                        <option value="11">
+                                            វិច្ឆិកា
+                                        </option>
+                                        <option value="12">
+                                            ឆ្នូ
+                                        </option>
+                                    </select>
+                                    @error('type')
+                                        <p class="text-base font-Notokhmer text-red-600">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            @endif
+                        </div>
+
                         <div class="text-center font-Notokhmer   font-bold text-2xl">កែប្រែពិន្ទុ</div>
                         <div class=" flex justify-around mt-4">
                             <div>
@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="flex items-center justify-end px-4 py-3  text-right sm:px-6">
-                        <a href="{{ URL::previous() }}"
+                        <a href="{{ route('score_index', $academic_class->id) }}"
                             class="inline-flex items-center px-4 py-2 bg-red-800 border border-transparent rounded-md font-Notokhmer text-base text-white uppercase tracking-widest hover:bg-red-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
                             ថយក្រោយ
                         </a>
