@@ -165,7 +165,7 @@
                         <div>
                             <div class="ml-4">
                                 <label for="khmer" class="text-base font-Notokhmer">ភាសាខ្មែរ</label>
-                                <input type="text" wire:model="khmer" name="khmer" id="khmer"
+                                <input type="number" wire:model="khmer" name="khmer" id="khmer"
                                     class="px-2 py-1 rounded-md shadow-sm ml-2">
                                 @error('khmer')
                                     <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
@@ -174,7 +174,7 @@
 
                             <div class="ml-4 my-5">
                                 <label for="math" class="text-base font-Notokhmer">គណិតវិទ្យា</label>
-                                <input type="text" name="math" wire:model="math" id="math"
+                                <input type="number" name="math" wire:model="math" id="math"
                                     class="px-2 py-1 rounded-md shadow-sm">
                                 @error('math')
                                     <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
@@ -185,7 +185,7 @@
                         <div>
                             <div class="mr-4 ml-2">
                                 <label for="science" class="text-base font-Notokhmer">វិទ្យាសាស្រ្ត</label>
-                                <input type="text" wire:model="science" name="sciencce" id="sciencce"
+                                <input type="number" wire:model="science" name="sciencce" id="sciencce"
                                     class="px-2 py-1 rounded-md shadow-sm">
                                 @error('science')
                                     <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
@@ -194,7 +194,7 @@
 
                             <div class="mr-3 my-5 ml-1">
                                 <label for="socail" class="text-base font-Notokhmer">សិក្សាសង្គម</label>
-                                <input type="text" wire:model="socail" name="socail" id="socail"
+                                <input type="number" wire:model="socail" name="socail" id="socail"
                                     class="px-2 py-1 rounded-md shadow-sm">
                                 @error('socail')
                                     <p class="text-base font-Notokhmer text-red-600 ml-20">{{ $message }}</p>
