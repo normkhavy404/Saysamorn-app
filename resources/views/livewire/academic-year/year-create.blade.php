@@ -6,7 +6,7 @@
             </p>
             <p class=" text-base text-blue-500  font-Notokhmer">ចូលបំពេញព័ត៌មានខាងក្រោម</p>
         </div>
-        <div class="max-w-4xl mx-auto sm:px-3 lg:px-8">
+        <div class="max-w-4xl mx-auto sm:px-3 py-3 lg:px-8">
             <div class="mt-5 md:mt-0 md:col-span-2">
                 <div class=" border shadow-lg overflow-hidden sm:rounded-md">
                     <div class="px-4 sm:p-3">

@@ -28,7 +28,7 @@
         </div>
         <div class="ml-5">
             <label for="" class="text-xl font-Notokhmer">ស្វែងរក</label>
-            <input class="pl-2 rounded-lg" type="date" wire:model="from_date">
+            <input class="pl-2 rounded-lg" type="date" wire:model="from_date" placeholder="d-m-Y">
         </div>
         <div class="flex flex-col">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-1">
@@ -69,13 +69,13 @@
                                     <td scope="col"
                                         class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
                                         @if ($att->gender == 1)
-                                            ប
+                                            ប្រុស
                                         @else
-                                            ស
+                                            ស្រី
                                         @endif
                                     </td>
                                     <td scope="col" class="px-6 py-3 border border-black">
-                                        {{ date('m-d-Y', strtotime($att->date)) }}
+                                        {{ date('d-m-Y', strtotime($att->date)) }}
                                     </td>
                                     <td scope="col"
                                         class="px-6 py-3 font-Notokhmer text-base text-gray-900 border border-black">
@@ -87,7 +87,7 @@
                                     </td>
                                     <td scope="col" class="px-6 py-3 border border-black">
                                         <div class=" flex px-6 py-3 justify-center">
-                                            <a href="{{ route('attendent_edit', $academic_class->id) }}">
+                                            <a href="{{ route('attendent_edit', [$att->id]) }}">
                                                 <svg class="h-7 w-7 text-green-500" viewBox="0 0 24 24" stroke-width="2"
                                                     stroke="currentColor" fill="none" stroke-linecap="round"
                                                     stroke-linejoin="round">
@@ -98,7 +98,7 @@
                                                     <line x1="16" y1="5" x2="19" y2="8" />
                                                 </svg>
                                             </a>
-                                            <a wire:click="DestroyAtt ({{ $academic_class->id }})">
+                                            <a wire:click="DestroyAtt ({{ $att->id }})">
                                                 <svg class="h-5 w-5 text-red-500" width="24" height="24"
                                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                                     fill="none" stroke-linecap="round" stroke-linejoin="round">

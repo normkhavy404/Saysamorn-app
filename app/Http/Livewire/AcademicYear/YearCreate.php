@@ -29,6 +29,7 @@ class YearCreate extends Component
 
     public function render()
     {
+        // $academic_years = Academic_year::all();
         $academic_years = DB::table('academic_years')->get();
         return view('livewire.academic-year.year-create', compact('academic_years'));
     }

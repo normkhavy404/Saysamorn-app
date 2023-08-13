@@ -70,7 +70,7 @@
                                         <td scope="col"
                                             class="px-6 py-3 whitespace-nowrap text-sm font-medium border border-black">
                                             <div class=" flex px-6 py-3 justify-center">
-                                                <a href="{{ route('year_show', $year->id) }}">
+                                                {{-- <a href="{{ route('year_show', $year->id) }}">
                                                     <svg class="h-7 w-7 text-blue-500" fill="none"
                                                         viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -79,7 +79,7 @@
                                                             stroke-width="2"
                                                             d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                                                     </svg>
-                                                </a>
+                                                </a> --}}
                                                 <a href="{{ route('year_edit', $year->id) }}">
                                                     <svg class="h-7 w-7 text-green-500" viewBox="0 0 24 24"
                                                         stroke-width="2" stroke="currentColor" fill="none"

@@ -12,14 +12,13 @@
     <title class="text-base font-muol">សាលាបឋមសិក្សា សាយសាម៉ន</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
+    <link rel="shortcut icon" href="/storage/images/thsis.png">
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @livewireStyles
-    @livewireScripts
 
 
     <!-- CSRF Token -->
@@ -29,7 +28,10 @@
 <body>
     @yield('body')
 
+    @livewireScripts
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <x-livewire-alert::scripts />
 </body>

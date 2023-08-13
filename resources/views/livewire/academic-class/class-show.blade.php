@@ -16,7 +16,7 @@
                 </button>
             </div>
         </div>
-        <div class=" mx-5" id="printMe">
+        <div class="" id="printMe">
             <div class=" text-center text-base font-Notokhmer font-bold">
                 <p>
                     ព្រះជារាណាចក្រកម្ពុជា
@@ -117,30 +117,26 @@
                             ស្រី {{ $total_f }} នាក់
                         </p>
                     </div>
-                    <div class="flex justify-end">
-                        <p class="text-base text-black font-Notokhmer">
-                            ថ្ងៃ​.....................ខែ..........ឆ្នាំ...................ព.ស ២៥៦...
-                        </p>
-                    </div>
-                    <div class="flex justify-end px-5 py-3">
-                        <p class="text-base text-black font-Notokhmer">
-                            សាយសាម៉ន ថ្ងៃទី.........ខែ.............ឆ្នាំ ២០២....
-                        </p>
-                    </div>
-                    <div class="flex justify-end px-28">
-                        <p class="text-base text-black font-Notokhmer">
-                            គ្រូបន្ទុកថ្នាក់
-                        </p>
-                    </div>
-                    <div class=" px-20">
-                        <p class="text-base text-black font-Notokhmer">
-                            បានឃើញ និង​​ ឯកភាព
-                        </p>
-                    </div>
-                    <div class="py-2 px-24">
-                        <p class="text-base text-black font-Notokhmer">
-                            នាយិកាសាលា
-                        </p>
+                    <div class=" flex justify-between">
+                        <div class="px-16 my-4">
+                            <p class="text-lg text-black font-Notokhmer">
+                                បានឃើញ និង​​ ឯកភាព
+                            </p>
+                            <p class="text-lg font-bold text-black font-muol px-3 py-4">
+                                នាយិកាសាលា
+                            </p>
+                        </div>
+                        <div>
+                            <p class="text-lg text-black font-Notokhmer mr-10">
+                                ថ្ងៃ​.....................ខែ..........ឆ្នាំ...................ព.ស ២៥៦...
+                            </p>
+                            <p class="text-lg text-black font-Notokhmer px-8">
+                                សាយសាម៉ន ថ្ងៃទី.........ខែ.............ឆ្នាំ ២០២....
+                            </p>
+                            <p class="text-lg font-bold text-black font-muol text-center py-5">
+                                គ្រូបន្ទុកថ្នាក់
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

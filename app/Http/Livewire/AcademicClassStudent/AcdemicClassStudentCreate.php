@@ -2,12 +2,15 @@
 
 namespace App\Http\Livewire\AcademicClassStudent;
 
-use App\Models\academic_class_student;
 use Livewire\Component;
+
 use Illuminate\Support\Facades\DB;
+use App\Models\academic_class_student;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 
 class AcdemicClassStudentCreate extends Component
 {
+    use LivewireAlert;
     public $student_id , $academic_class_id;
 
     protected $rules =[
@@ -45,8 +48,11 @@ class AcdemicClassStudentCreate extends Component
         $academic_class_student->academic_class_id = $this->academic_class_id;
         $academic_class_student->status = 1;
         if($academic_class_student->save()){
-            session()->flash('success','Academic Class Student Successfuly Created.');
-            $this->reset(['student_id']);
+            $this->alert('success', 'ទាញជោគជ័យ', [
+                'position' => 'center',
+                'timer' => 3000,
+                'toast' => true,
+               ]);
         }
     }
 }

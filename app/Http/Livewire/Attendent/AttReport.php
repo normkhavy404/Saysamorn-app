@@ -33,7 +33,7 @@ class AttReport extends Component
 
         foreach($students as $k => $student) {
             $data[$k][] = $student->name;
-            $data[$k][] = $student->gender == 1 ? 'ប្រុស' : 'ស្រី';
+            $data[$k][] = $student->gender == 1 ? 'ប' : 'ស';
             $data[$k][] = 0;
             $data[$k][] = 0;
             $data[$k][] = 0;
